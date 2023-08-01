@@ -12,6 +12,9 @@ function App() {
       {/* Your components and routes go here */}
       <div className="App">
         {/* Your app content */}
+        <h1 className="text-3xl font-bold underline text-[red] ">
+      Hello world!
+    </h1>
       </div>
     </Provider>
   );
