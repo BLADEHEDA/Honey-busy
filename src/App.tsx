@@ -1,13 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// src/App.tsx
+
+import React from 'react';
+import { Provider } from 'react-redux';
+import store from './store';
+
+import './App.css';
 
 function App() {
   return (
-    <>
-    </>
-  )
+    <Provider store={store}>
+      {/* Your components and routes go here */}
+      <div className="App">
+        {/* Your app content */}
+      </div>
+    </Provider>
+  );
 }
 
-export default App
+export default App;
