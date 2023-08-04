@@ -1,0 +1,47 @@
+.honey{
+    animation: moveUpDown 3s infinite;
+}
+@keyframes moveUpDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(20px); /* Adjust the vertical movement distance */
+    }
+  }
+  /* second honey image */
+  .honey1{
+    animation: moveUpDown 2s infinite;
+}
+@keyframes moveUpDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(20px); /* Adjust the vertical movement distance */
+    }
+  }
+  /* haphazard honey movement  */
+  .animation-container {
+    position: relative;
+    width: 200px;
+    height: 120px;
+    overflow: hidden;
+  }
+  
+  .honey4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: moveCircular 4s infinite;
+  }
+  
+  @keyframes moveCircular {
+    0% {
+      transform: translateX(0) translateY(0);
+    }
+    100% {
+      transform: translateX(100px) translateY(100px);
+    }
+  }
+  
