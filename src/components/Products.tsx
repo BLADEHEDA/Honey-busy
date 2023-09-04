@@ -1,9 +1,9 @@
 import React from 'react'
-import productData from "../components/Data.json"
+import products from  "../components/Data"
 
 const Products = () => {
     // get the first 3 elemnts from the lists of products 
-    const homeProducts = productData.slice(0,3)
+    const homeProducts = products.slice(0,3)
     console.log('here are the home products',homeProducts);
     
   return (
@@ -17,7 +17,7 @@ const Products = () => {
             <div key={product.id} >
                 {/* display the new sign on a particular product in this case product 2 */}
                 {index===1 && <div className="">NEW</div>  }
-                <img src= alt={product.name} />
+                <img src={product.image} alt={product.name} />
                 <h1 className="">{product.name} </h1>
                 <p className=""> ${product.price} </p>
                 <p className="">{product.description} </p>
