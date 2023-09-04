@@ -1,0 +1,102 @@
+[
+    {
+      "id": 1,
+      "image": "../assets/h1product1-768x768.jpg",
+      "name": "PURE RAW HONEY",
+      "price": 20.00,
+      "description": "Experience the pure essence of nature with our Wildflower Honey. Sourced from diverse wildflowers, this honey offers a delightful blend of floral notes, perfect for drizzling on toast or adding to your favorite recipes."
+    },
+    {
+      "id": 2,
+      "image": "../assets/h1product2-768x768.jpg",
+      "name": "WILDFLOWER HONEY",
+      "price": 15.00,
+      "description": "Embrace the goodness of nature with our Organic Raw Honey. Unprocessed and straight from the hive, it retains all the natural enzymes and health benefits. Enjoy its rich, caramel-like flavor and versatility in your daily wellness routine."
+    },
+    {
+      "id": 3,
+      "image": "../assets/h1product3-768x768.jpg",
+      "name": "FOREST HONEY",
+      "price": 10.00,
+      "description": "Discover the unparalleled benefits of Manuka Honey. Harvested from the native Manuka tree in New Zealand, this honey is renowned for its unique antibacterial properties. Use it to support your immune system and promote overall well-being."
+    },
+    {
+      "id": 4,
+      "image": "../assets/product4",
+      "name": "HONEY BEE",
+      "price": 12.00,
+      "description": "Capture the sunshine of citrus groves with Orange Blossom Honey. It boasts a zesty, citrusy aroma and flavor that brightens up your day. Drizzle it over desserts or use it as a natural sweetener in beverages."
+      
+    },
+    {
+      "id": 5,
+      "image": "../assets/product5",
+      "name": "HONEY FACE CREAM",
+      "price": 45.00,
+      "description": "Indulge in the soothing aroma and taste of Lavender-Infused Honey. Lavender blossoms lend their delicate flavor to this honey, making it a delightful addition to teas, desserts, or a drizzle over yogurt for a calming experience."
+    },
+    {
+      "id": 6,
+      "image": "../assets/product6",
+      "name": "MEADOW HONEY",
+      "price": 15.00,
+      "description": "Experience the herbal and aromatic notes of Rosemary Honey. Infused with the essence of fresh rosemary, this honey is perfect for drizzling over roasted vegetables or pairing with cheeses and charcuterie for a delightful appetizer."
+    },
+    {
+      "id": 7,
+      "image": "../assets/product7",
+      "name": "ORGANIC HONEY",
+      "price": 15.00,
+      "description": "Bask in the golden sweetness of Sunflower Honey. Derived from the nectar of sunflower blooms, this honey offers a mild and nutty flavor profile. Use it as a natural sweetener in your morning tea or coffee."
+    },
+    {
+      "id": 8,
+      "image": "../assets/product8",
+      "name": "HONEY JAM",
+      "price": 20.00,
+      "description": "Experience the warm and comforting flavors of Cinnamon-Infused Honey. Cinnamon sticks are gently infused into this honey, creating a delightful blend of sweetness and spice. Drizzle it over oatmeal or use it to add a unique twist to your baking recipes."
+    },
+    {
+      "id": 9,
+      "image": "../assets/product9",
+      "name": "RAW HONEYCOMB",
+      "price": 15.00,
+      "description": "Delicate and light, Acacia Honey is a versatile sweetener that complements a variety of dishes. Its mild flavor and clear appearance make it an excellent choice for sweetening beverages or enhancing the taste of fresh fruits."
+    },
+    {
+      "id": 10,
+      "image": "../assets/product10",
+      "name": "Product 10",
+      "price": 109.99,
+      "description": "Dive into the robust and earthy flavors of Buckwheat Honey. Dark in color and rich in antioxidants, this honey offers a strong, molasses-like taste. Enjoy it as a natural sweetener or as a bold pairing with cheese and charcuterie."
+    },
+    {
+      "id": 11,
+      "image": "../assets/product11",
+      "name": "Product 11",
+      "price": 119.99,
+      "description": "Experience the classic sweetness of Clover Honey. Collected from the nectar of clover blossoms, it is a staple in every honey lover's pantry. Its mild, pleasant taste makes it ideal for baking and drizzling over breakfast treats."
+    },
+    {
+      "id": 12,
+      "image": "../assets/product12",
+      "name": "QUEEN BEE HONEY",
+      "price": 50.00,
+      "description": "Transport your taste buds to the Australian outback with Eucalyptus Honey. Known for its herbal and slightly woody notes, this honey is cherished for its potential respiratory benefits. Enjoy it in teas or as a unique culinary ingredient."
+    },
+    {
+      "id": 13,
+      "image": "../assets/product13",
+      "name": "MANUKA HONEY",
+      "price": 35.00,
+      "description": "Savor the fruity delight of Blueberry Honey. Infused with the essence of ripe blueberries, this honey adds a burst of berry goodness to your pancakes, waffles, or a simple bowl of yogurt."
+    },
+    {
+      "id": 14,
+      "image": "../assets/product14",
+      "name": "HEATHER HONEY",
+      "price": 10.00,
+      "description": "Capture the sunshine of citrus groves with Orange Blossom Honey. It boasts a zesty, citrusy aroma and flavor that brightens up your day. Drizzle it over desserts or use it as a natural sweetener in beverages."
+    }
+  ]
+  
