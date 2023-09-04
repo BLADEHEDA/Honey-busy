@@ -7,7 +7,6 @@ import leftleaf from '../assets/h1-rev-img-7.png'
 import leafright from '../assets/h1-rev-img-8.png'
 import honey4 from '../assets/h1-rev-img-4.png'
 import Button from './Button'
-import MissionBar from './MissionBar'
 const Mainbar = () => {
   return (
     <main className="bg-[#F7F3F0] ">
@@ -43,7 +42,6 @@ const Mainbar = () => {
               <img src={leafright} className=' w-[6em] ' alt="leaf" /> 
             <img src={ leftleaf} className=' w-[6em] '  alt="leaf" />        
         </div>
-        <MissionBar/>
     </main>
   )
 }

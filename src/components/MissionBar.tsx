@@ -5,7 +5,7 @@ const MissionBar = () => {
     const videoUrl = "https://vimeo.com/44384072";
     // const thumbnailUrl = 'https://example.com/thumbnail.jpg';
   return (
-    <main className='px-7 py-7 ' > 
+    <main className='px-8 py-7 ' > 
         <ReactPlayer
         url={videoUrl}
         controls
