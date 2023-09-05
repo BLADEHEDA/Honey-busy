@@ -6,14 +6,12 @@ import Carousel from 'better-react-carousel'
 const TestimonialProp = (props) => {
     return (
       <main className='relative' >
-        <div className=" absolute left-[75%] ">
+        <div className=" absolute left-[78%] ">
         <div className="text-white italic text-[2.2em] w-[2em] h-[2em]  rounded-full bg-[#C74817] 
          flex items-center justify-center bg-[#D3A863]">99</div>
         </div>
-       
-
         <div className="border-3 mb-[1.8em] pt-[1.5em] "> <img src={props.image}  alt="" /></div>
-        <p className="italic text-[1.5em] text-[#705B68] mb-[1.7em] "><span>”</span>{props.content}<span>”</span></p>
+        <p className="italic text-[1.5em] text-[#705B68] mb-[1.5em] "><span>”</span>{props.content}<span>”</span></p>
         <h2 className="font-[800] text-[1.325em] text-black  ">{props.name} </h2>
         <h3 className="text-[#C74817] text-[0.9em] ">{props.type} </h3>
       </main>
@@ -22,7 +20,7 @@ const TestimonialProp = (props) => {
 -7
 const Testimonial = () => {
   return (
-    <main className='px-8 mt-[8em]' >
+    <main className='px-5 mt-[8em]' >
       {/* carousel component */}
       <Carousel
         cols={1}
