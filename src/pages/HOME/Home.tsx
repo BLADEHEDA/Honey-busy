@@ -7,6 +7,7 @@ import News from '../../components/News'
 import Products from '../../components/Products'
 import Testimonial from '../../components/Testimonial'
 import Gallery from '../../components/Gallery'
+import Newsletter from '../../components/Newsletter'
 const Home = () => {
   return (
     <div className='bg-[#F7F3F0] pb-[10em] ' >
@@ -17,6 +18,7 @@ const Home = () => {
     <Products/>
     <Testimonial/>
     <Gallery/>
+    <Newsletter/>
     </div>
   )
 }

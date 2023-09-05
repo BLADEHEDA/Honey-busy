@@ -6,6 +6,7 @@ import product3 from "../assets/h1-img8-768x492.jpg";
 import product4 from "../assets/h1-img9-1.jpg";
 import product5 from "../assets/h1-img10-1.jpg";
 import product6 from "../assets/h1-img11-1.jpg";    
+
 const Gallery = () => {
     // define the images 
     const galleryImages= [
