@@ -37,9 +37,7 @@ const Gallery = () => {
             id: 6,
             image: product6,
           },
-    ]
-    // console.log(galleryImages);
-    
+    ]    
 
   return (
     <main className='px-[1.7em] mt-[5em] md:px-[3.5em] lg:px-[5em]' >
