@@ -44,4 +44,19 @@
       transform: translateX(100px) translateY(100px);
     }
   }
+  /* different screen sizes */
+  @media (min-width: 1px) {
+    
+  }
+  @media (min-width: 768pxpx) {
+      
+  }
+  @media (min-width: 1024px) {
+      .honeytypescards{
+          /* border: solid 5px red; */
+          display: grid;
+          grid-template-columns: auto auto ;
+          gap: 20px;
+      }
+  }
   

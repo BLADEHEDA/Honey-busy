@@ -2,6 +2,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faCaretRight } from '@fortawesome/free-solid-svg-icons'
 import products from  "../components/Data"
+import hanging from "../assets/hanging.jpg"
 // define the data fpr the cards
 
 const HoneyCards = (props) => {  
@@ -22,11 +23,13 @@ const HoneyCards = (props) => {
 const Honeytypes = () => {
     const productCards = products.slice(0,4)    
   return (
-    <div className='px-[1.7em] mt-[7em] md:px-[3.5em] md:mt-[] ' >
-    <h1 className="text-[black] text-center text-[2.1em] font-[900] mb-5 mt-[1.5em] ">TYPES OF HONEY</h1>
+    <div className='px-[1.7em] mt-[7em] md:px-[3.5em] lg:px-[5em] ' >
+    <h1 className="text-[black] text-center text-[2.1em] font-[900] mb-5 mt-[1.5em] md:text-[2.3em] lg:text-[2.5em]  ">
+      TYPES OF HONEY</h1>
       <p className="text-[1.15em] text-center mr-2 mb-5 md:mb-[2.2em] ">
         Learn more about some of the products we take special pride in.</p>
         {/*map and dispaly thecards  */}
+        <div className="honeytypescards border- ">
         {productCards.map((productCard,index)=>(
           <HoneyCards
             key={index}
@@ -35,8 +38,7 @@ const Honeytypes = () => {
             content={productCard.description}
           />
         ) )}
-        
-
+         </div>
     </div>
   )
 }
