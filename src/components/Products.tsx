@@ -5,7 +5,6 @@ import CartButton from './CartButton';
 const Products = () => {
     // get the first 3 elemnts from the lists of products 
     const homeProducts = products.slice(11,14)
-    // console.log('here are the home products',homeProducts);
     
   return (
     <div className='px-8 mt-[8em] md:px-[3.5em] lg:px-[5em] ' >
