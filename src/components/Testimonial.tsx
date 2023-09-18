@@ -5,15 +5,24 @@ import Carousel from 'better-react-carousel'
 
 const TestimonialProp = (props) => {
     return (
-      <main className='relative' >
-        <div className=" absolute left-[78%] ">
-        <div className="text-white italic text-[2.2em] w-[2em] h-[2em]  rounded-full bg-[#C74817] 
+      <main className='relative md:px-[2.5em] lg:px-[3em]' >
+        <div className=" absolute left-[78%] md:left-[35%] lg:left-[25%] ">
+        <div className="text-white italic text-[2.2em] w-[2em] h-[2em] rounded-full bg-[#C74817] 
          flex items-center justify-center bg-[#D3A863]">99</div>
         </div>
-        <div className="border-3 mb-[1.8em] pt-[1.5em] "> <img src={props.image}  alt="" /></div>
-        <p className="italic text-[1.5em] text-[#705B68] mb-[1.5em] "><span>”</span>{props.content}<span>”</span></p>
-        <h2 className="font-[800] text-[1.325em] text-black  ">{props.name} </h2>
-        <h3 className="text-[#C74817] text-[0.9em] ">{props.type} </h3>
+        <section className="lg:flex ">
+          <article className="">
+        <div className="border-3 mb-[1.8em] pt-[1.5em] "> 
+        <img src={props.image} className=' md:w-[16em] lg:w-[55em] '  alt="" />
+        </div>
+        </article>
+          <article className="lg:mt-[2em] lg:ml-[4em] ">
+          <p className="italic text-[1.5em] text-[#705B68] mb-[1.5em] lg:text-[1.7em] lg:w-[83%] ">
+            <span>”</span>{props.content}<span>”</span></p>
+          <h2 className="font-[800] text-[1.325em] text-black  ">{props.name} </h2>
+          <h3 className="text-[#C74817] text-[0.9em] ">{props.type} </h3>
+          </article>
+        </section>
       </main>
     )
   }
@@ -26,9 +35,9 @@ const Testimonial = () => {
         cols={1}
         // rows={1}
         // gap={0}
-        // loop={true}
-        // auto={true} // Add auto to make it an infinite loop
-        // timeout={3000} // Adjust the timeout (3 seconds in this example)
+        loop={true}
+        autoplay={5000} 
+        hideArrow={true}
       >
       <Carousel.Item>
       <TestimonialProp
