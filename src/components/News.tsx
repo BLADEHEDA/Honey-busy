@@ -2,7 +2,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faCaretRight } from '@fortawesome/free-solid-svg-icons'
 
-const NewsProp=(props:srting)=>{
+const NewsProp=(props:any)=>{
     return(
         <div className="prop mb-[2.5em] lg:pl-[1em] ">
             <p className="date text-[#C74B4B] text-[0.9em] font-[700]  ">{props.date}</p>
