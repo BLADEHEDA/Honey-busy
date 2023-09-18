@@ -20,7 +20,7 @@ const MissionBar = () => {
         controls
         width="100%"
         height="22em"
-        light={thumbnailUrl} // Set the thumbnail image URL here
+        light={thumbnailUrl} 
       />
    </div>
    <div className="hidden lg:block ">
