@@ -8,11 +8,13 @@ const Products = () => {
     // console.log('here are the home products',homeProducts);
     
   return (
-    <div className='px-8 mt-[8em] ' >
-      <h1 className="head text-[black] text-center text-[1.9em] font-[500] mb-3  ">OUR PRODUCTS</h1>
-      <p className=" text-[1.15em] text-center mr-2 mb-5">Check out our online shop for cute bee-themed apparel, unique bee suits, 
+    <div className='px-8 mt-[8em] md:px-[3.5em] lg:px-[5em] ' >
+      <h1 className="head text-[black] text-center text-[1.9em] font-[500] mb-3 lg:text-[2.5em]  ">OUR PRODUCTS</h1>
+      <p className=" text-[1.15em] text-center mr-2 mb-5 lg:w-[47%] lg:mx-auto ">
+        Check out our online shop for cute bee-themed apparel, unique bee suits, 
       educational tools, gift certificates and more.</p>
       {/* render the products */}
+      <div className="productcards">
       {
         homeProducts.map((product,index)=>(
             <div key={product.id} className='mb-[2em] relative ' >
@@ -25,11 +27,11 @@ const Products = () => {
                 <div className=''>
                     <CartButton />
                 </div>
-
             </div>
 
         ))
       }
+      </div>
     </div>
   )
 }

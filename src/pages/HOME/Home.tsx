@@ -13,9 +13,16 @@ const Home = () => {
   return (
     <div className='bg-[#F7F3F0] pb-[7em] ' >
     <Mainbar/>
-    <MissionBar/>
-    <Mission/>
+    <section className=" md:px-[1em] lg:px-[5em] lg:flex  ">
+      <div className=" w-full">
+        <MissionBar/>
+        <Mission/>
+      </div>
+    <div className=" lg:w-[60%] lg:pt-[2em] ">
     <News/>
+    </div>
+    </section>
+   
     <Products/>
     <Testimonial/>
     <Gallery/>

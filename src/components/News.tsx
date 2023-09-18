@@ -4,7 +4,7 @@ import {faCaretRight } from '@fortawesome/free-solid-svg-icons'
 
 const NewsProp=(props:srting)=>{
     return(
-        <div className="prop mb-[2.5em] ">
+        <div className="prop mb-[2.5em] lg:pl-[1em] ">
             <p className="date text-[#C74B4B] text-[0.9em] font-[700]  ">{props.date}</p>
             <h2 className="text-[black] text-[1.175em] font-[700] mb-3 hover:text-[#C74B4B] ">{props.head}</h2>
             <p className="content text-[#705B68] "> {props.content} </p>
@@ -14,8 +14,8 @@ const NewsProp=(props:srting)=>{
 
 const News = () => {
   return (
-    <div  className='news bg-[white] mx-8 px-6 py-8 mb-[5em]'  >
-      <h1 className='text-[black] text-[1.9em] font-[600] mb-6' >NEWS</h1>
+    <div  className='news bg-[white] mx-8 px-6 py-8 mb-[5em] '  >
+      <h1 className='text-[black] text-[1.9em] font-[600] mb-6 lg:ml-[10px]' >NEWS</h1>
       <NewsProp
       date='MAY 14, 2020'
       head='SWEET HONEY PACKS FRESH RAW AND UNFILTERED'
