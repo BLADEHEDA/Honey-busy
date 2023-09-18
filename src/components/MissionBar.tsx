@@ -29,7 +29,7 @@ const MissionBar = () => {
         controls
         width="100%"
         height="28em"
-        light={thumbnailUrl} // Set the thumbnail image URL here
+        light={thumbnailUrl} 
       />
    </div>
     </main>
