@@ -1,7 +1,4 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faCaretRight } from '@fortawesome/free-solid-svg-icons'
-import products from  "../components/Data"
 
 import product1 from "../assets/h1-img6-768x492.jpg"
 import product2 from "../assets/h1-img7-768x492.jpg";
