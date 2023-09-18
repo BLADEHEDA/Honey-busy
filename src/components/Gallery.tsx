@@ -47,7 +47,6 @@ const Gallery = () => {
        the latest news and events in our image gallery and see for yourself.</p>
        {/* display the images */}
        <div className=" gallerycards  border- border-[red]"> 
-       {/* <div className="honeytypescards border- "> */}
        {galleryImages.map((galleryImage)=>( 
          <div className="my-5"><img src={galleryImage.image} alt="" /></div>
          )
