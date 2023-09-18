@@ -3,7 +3,7 @@ import pic1 from '../assets/home-1-testimonial-1.png'
 import pic2 from '../assets/home-1-testimonial-2.png'
 import Carousel from 'better-react-carousel'
 
-const TestimonialProp = (props) => {
+const TestimonialProp = (props:any) => {
     return (
       <main className='relative md:px-[2.5em] lg:px-[3em]' >
         <div className=" absolute left-[78%] md:left-[35%] lg:left-[25%] ">
