@@ -12,11 +12,16 @@ import product11 from "../assets/product11.jpg"
 import product12 from "../assets/product12.jpg"
 import product13 from "../assets/product13.jpg"
 import product14 from "../assets/product14.jpg"
+import honey1 from "../assets/home1.png"
+import honey2 from "../assets/home2.png"
+import honey3 from "../assets/honey3.png"
+import honey4 from "../assets/honey4.png"
 
 const products = [
   {
     id: 1,
     image: product1,
+    image1: honey1,
     name: "PURE RAW HONEY",
     price: 20.00,
     description: "Delightful blend of wildflowers, perfect for toast or recipes, pure essence of nature.",
@@ -24,6 +29,7 @@ const products = [
   {
     id: 2,
     image: product2,
+    image1: honey2,
     name: "WILDFLOWER HONEY",
     price: 15.00,
     description: "Unprocessed, rich, caramel-like flavor, daily wellness with organic raw honey.",
@@ -31,6 +37,7 @@ const products = [
   {
     id: 3,
     image: product3,
+    image1: honey3,
     name: "FOREST HONEY",
     price: 10.00,
     description: "Unique antibacterial Manuka honey, supports immunity, from New Zealand's native Manuka tree.",
@@ -38,6 +45,7 @@ const products = [
   {
     id: 4,
     image: product4,
+    image1: honey4,
     name: "HONEY BEE",
     price: 12.00,
     description: "Zesty, citrusy Orange Blossom Honey, drizzle over desserts, natural sweetener for beverages.",

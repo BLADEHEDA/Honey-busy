@@ -35,7 +35,7 @@ const Gallery = () => {
             image: product6,
           },
     ]
-    console.log(galleryImages);
+    // console.log(galleryImages);
     
 
   return (

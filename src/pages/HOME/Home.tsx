@@ -8,6 +8,7 @@ import Products from '../../components/Products'
 import Testimonial from '../../components/Testimonial'
 import Gallery from '../../components/Gallery'
 import Newsletter from '../../components/Newsletter'
+import Honeytypes from '../../components/Honeytypes'
 const Home = () => {
   return (
     <div className='bg-[#F7F3F0] pb-[10em] ' >
@@ -19,6 +20,7 @@ const Home = () => {
     <Testimonial/>
     <Gallery/>
     <Newsletter/>
+    <Honeytypes/>
     </div>
   )
 }
