@@ -4,7 +4,7 @@ import Button from './Button';
 
 const Newsletter = () => {
   return (
-    <div className='px-[1.7em] mt-[3em]' >
+    <div className='px-[1.7em] mt-[3em] md:px-[3.5em] lg:px-[5em] ' >
       <img src={image} alt="image" />
       <h1 className="text-[black] text-start text-[2.1em] font-[900] mb-5 mt-[1.5em] mr-[2em]">NEWSLETTER SIGN UP</h1>
       <p className="text-[1.15em] text-start mr-2 mb-5">Neque porro quisquam est, qui dolorem ipsum quia dolor
