@@ -11,7 +11,7 @@ import Newsletter from '../../components/Newsletter'
 import Honeytypes from '../../components/Honeytypes'
 const Home = () => {
   return (
-    <div className='bg-[#F7F3F0] pb-[10em] ' >
+    <div className='bg-[#F7F3F0] pb-[7em] ' >
     <Mainbar/>
     <MissionBar/>
     <Mission/>

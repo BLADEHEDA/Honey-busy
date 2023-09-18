@@ -15,7 +15,8 @@ const Newsletter = () => {
             <input 
             type="text" 
             placeholder='Email Address'
-            className="border-2 border-[#705B68] p-3.5 w-full bg-[#F7F3F0] text-[1.2em] mb-2 " /> </div>
+            className="border-2 border-[#705B68] p-3.5 w-full bg-[#F7F3F0] text-[1.2em] mb-2 focus:outline-none" />
+             </div>
         <div className="w-full"> 
         <Button
         name='SUBSCRIBE'

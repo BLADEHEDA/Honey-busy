@@ -5,16 +5,17 @@ import { Provider } from 'react-redux';
 import store from './store';
 
 import './App.css';
-import Footer from './components/shared/Footer'
 import { BrowserRouter,  Routes,Route} from "react-router-dom"
 import Navbar from './components/Navbar';
 import Home from './pages/HOME/Home';
+import Footer from './components/Footer';
 
 function App() {
   return (  
     <BrowserRouter  >
     <Navbar/>
     <Home/>
+    <Footer/>
     {/* <Routes> 
     <Route path='/' element={<SigninFacebookGoogle/>}/> 
     <Route path='diary' element={<Home/>}/> 
@@ -22,7 +23,6 @@ function App() {
      <Route path="diary/[create diary]" element={<Form/>} /> 
     <Route path="*" element={<Home />} /> 
     </Routes> */}
-    {/* <Footer/> */}
     </BrowserRouter>
   );
 }
