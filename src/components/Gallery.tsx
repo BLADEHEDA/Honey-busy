@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 
 import product1 from "../assets/h1-img6-768x492.jpg"
 import product2 from "../assets/h1-img7-768x492.jpg";
