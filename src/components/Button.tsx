@@ -1,12 +1,18 @@
+import React from 'react';
 
-const Button = (props:string) => {
-  return (
-    <div>
-      <button className="bg-[#c74817] text-[white]  " style={props.style}  >
-        {props.name}
-      </button>
-    </div>
-  )
+interface ButtonProps {
+  name: string;
+  style: React.CSSProperties;
 }
 
-export default Button
+const Button: React.FC<ButtonProps> = ({ name, style }) => {
+  return (
+    <div>
+      <button className="bg-[#c74817] text-[white]" style={style}>
+        {name}
+      </button>
+    </div>
+  );
+};
+
+export default Button;

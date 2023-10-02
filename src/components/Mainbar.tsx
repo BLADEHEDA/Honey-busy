@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import leaf from '../assets/h1-rev-img-1.png'
 import honey1 from "../assets/h1-rev-img-5.png"
 import honey2 from "../assets/h1-rev-img-3.png"
@@ -10,7 +10,9 @@ import Button from './Button'
 const Mainbar = () => {
   return (
     <main className="bg-[#F7F3F0] ">
-      <div >
+      {/* mobile hero section */} FRESH & SWEET AS HONEY.
+      <section className="">
+      <div>
         <div className="flex justify-between pt-5 "> 
         <img className='w-[6em] ' src={leaf} alt="leaf" />
         <img src={honey1} className='w-[2em] h-[2em] mt-2 mr-3 ' alt="honey1" />
@@ -42,6 +44,7 @@ const Mainbar = () => {
               <img src={leafright} className=' w-[6em] ' alt="leaf" /> 
             <img src={ leftleaf} className=' w-[6em] '  alt="leaf" />        
         </div>
+        </section>
     </main>
   )
 }
