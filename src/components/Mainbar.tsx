@@ -13,7 +13,7 @@ import line1 from "../assets/h1-rev-img-10.png"
 import Button from './Button'
 const Mainbar = () => {
   return (
-    <main className="bg-[#F7F3F0] ">
+    <main className="bg-[#F7F3F0] overflow-hidden ">
       {/* mobile hero section */} 
       <section className="bloc md:hidden  ">
       <div>
