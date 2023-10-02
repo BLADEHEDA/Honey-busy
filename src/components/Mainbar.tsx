@@ -8,6 +8,8 @@ import leafright from '../assets/h1-rev-img-8.png'
 import honey4 from '../assets/h1-rev-img-4.png'
 import heropic from "../assets/h1-rev-img-12.jpg"
 import hero from "../assets/image.png"
+import line from "../assets/h1-rev-img-11.png"
+import line1 from "../assets/h1-rev-img-10.png"
 import Button from './Button'
 const Mainbar = () => {
   return (
@@ -47,8 +49,8 @@ const Mainbar = () => {
             <img src={ leftleaf} className=' w-[6em] '  alt="leaf" />        
         </div>
         </section>
-        {/* desktop and tablet hero section */}
-        <section className="">
+        {/* tablet hero section */}
+        <section className=" hidden md:block lg:hidden ">
         <div>
         <div className="hidden md:flex justify-end lg:hodden pt-[5em] md:pr-[1em] ">
             <img src={hero} alt="" className="w-[8em] " />
@@ -65,7 +67,7 @@ const Mainbar = () => {
         </div>
       </div>
         <section className=" hidden md:block pt-[13em ">
-          <article className="mx-aut border- border-[red] w-[80% text-center px-[10em]">
+          <article className="text-center px-[10em]">
             <h1 className="text-[1.2em] font-[500] text-[black]">FRESH & SWEET AS HONEY.</h1>
             <h1 className="text-[5em] font-[900] text-[black] mt-1 mb-7 ">HONEYBEE</h1>
              <p className="mb-7">Step into our honey paradise! Discover a diverse 
@@ -86,22 +88,68 @@ const Mainbar = () => {
             />
           </div>
           </article>
-          {/* <div className="article">
-            <div className="hidden lg:block ">
-            <img src={hero} alt="" className="w-[20%] " />
-            </div>
-            <div className="">
-            <img src={heropic} alt="" className="" />
-            </div>
-          
-          </div> */}
-          <div className="flex justify-between mt-[3em] ">
+          <article className="flex justify-between mt-[3em] ">
               <img src={leafright} className=' w-[6em] h-[10em] mt-[10em] ' alt="leaf" /> 
               <div className="">
             <img src={heropic} alt="" className="w-[20em] " />
             </div>
-        </div>
+        </article>
         </section>
+        </section>
+        {/* desktop hero section */}
+        <section className="hidden lg:flex">
+          <article className="flex-[50%] pr-[2em]">
+            <div className="mb-[-5em] ">
+            <img className='w-[6em] ' src={leaf} alt="leaf" />
+            </div>
+            <div className="text-cente pl-[5em] ">
+            <h1 className="text-[1.2em] font-[500] text-[black]">FRESH & SWEET AS HONEY.</h1>
+            <h1 className="text-[7em] font-[600] text-[black] mt-3 mb-7 ml-[-10px] ">HONEYBEE</h1>
+            <img className='left-[2em] honey absolute ' src={honey2} alt="honey" />
+             <p className="mb-7">Step into our honey paradise! Discover a diverse 
+             selection, from wildflower to lavender-infused. Elevate your well-being 
+             with our pure, artisanal honey. Savor nature's sweetness today.</p>
+            <div className=" flex justify-cente">
+            <Button 
+            name="vIEW MORE"
+            style={{
+                paddingTop:'1.1em',
+                paddingBottom:'1.1em',
+                paddingLeft:'2.3em',
+                paddingRight:'2.3em',
+                fontSize:'1em',
+                fontWeight:'700',
+                marginTop:'1em'
+            }}
+            />
+          </div>
+          </div>
+          <div className="">    
+            <img src={leafright} className=' w-[6em] h-[10em] mt-[10em ' alt="leaf" /> 
+          </div>
+          </article>
+          <article className=" relative flex-[50%] ">
+                <div className="absolute bottom-[2em  right-[-17em] transform rotate-9 ">  
+              <img src={line} alt="line.img" />
+            </div>
+          <img className='left-[2em] honey absolute ' src={honey1} alt="honey" />
+          <img className='right-[4em] honey absolute ' src={honey3} alt="honey" />
+            <div className=" absolute right-[2em] top-[8em] ">
+            <img src={hero} className=' w-[9em]  ' alt="leaf" /> 
+            </div>
+         <div className="">  <img src={heropic} alt="" className="w-[32em] " /></div>
+          
+          <div className="absolute right-[1em] bottom-[8em] ">
+          <img src={ leftleaf} className=' w-[6em] '  alt="leaf" /> 
+            </div> 
+            <div className="absolute bottom-[0.3em]  left-[-18em] ">  
+              <img src={line1} alt="line.img" />
+            </div>
+            {/* <div className="absolute bottom-[2em]  left-[-12em] transform rotate-9 ">  
+              <img src={line} alt="line.img" />
+            </div> */}
+          
+          </article>
         </section>
     </main>
   )
