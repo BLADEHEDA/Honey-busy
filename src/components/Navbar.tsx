@@ -120,7 +120,7 @@ const Navbar = () => {
         <div className=" "></div> 
        </div>
        <div className="navlin relative">
-        <p className="font-[500] text-[0.95em] text-[black]">PAGES</p>
+        <p className="font-[500] text-[0.95em] text-[black] cursor-pointer cursor-pointer ">PAGES</p>
       {/* hover-div */}
         <div className="bg-[white] mt-[2.5em] border- border-[black] py-[1.2em] pl-[1.7em] 
        pr-[15em absolute w-[14em] z-[999] shadow-md left-[-2em] hidden ">
@@ -130,7 +130,7 @@ const Navbar = () => {
             <Link
             key={index}
             to={pageLink.href}
-            className='font-[500] text-[0.85em] text-[black] w-full '
+            className='font-[500] text-[0.85em] text-[black] w-full hover:text-[#c74817] '
             >
             {pageLink.name}
             </Link>
@@ -141,21 +141,21 @@ const Navbar = () => {
           </div> 
        </div>
        <div className="navlin relative">
-        <p className="font-[500] text-[0.95em] text-[black]">PRODUCTS</p>
+        <p className="font-[500] text-[0.95em] text-[black] cursor-pointer ">PRODUCTS</p>
       {/* hover-div */}
       <div className="bg-[white] mt-[2.5em] border- border-[black] py-[1.2em] pl-[1.7em] 
        pr-[15em absolute w-[14em] z-[999] shadow-md left-[-2em] hidden ">
         <div className="mb-2">
             <Link
             to="/shoplist"
-            className='font-[500] text-[0.85em] text-[black] w-full ' > 
+            className='font-[500] text-[0.85em] text-[black] w-full hover:text-[#c74817] ' > 
             SHOP LIST
             </Link>
           </div>
           <div className="mb-2">
             <Link
             to="/shoplist"
-            className='font-[500] text-[0.85em] text-[black] w-full ' > 
+            className='font-[500] text-[0.85em] text-[black] w-full hover:text-[#c74817]  ' > 
             SHOP SINGLE
             </Link>
           </div>
@@ -164,7 +164,8 @@ const Navbar = () => {
             <div className="">
             <Link
             to="/shoplist"
-            className='font-[500] text-[0.85em] text-[black] w-full ' > 
+            className='font-[500] text-[0.85em] text-[black] w-full 
+             hover:text-[#c74817] ' > 
             LAYOUTS
             </Link>
             </div>
@@ -180,7 +181,7 @@ const Navbar = () => {
             <Link
             key={index}
             to={prodcutLink.href}
-            className='font-[500] text-[0.85em] text-[black] w-full '
+            className='font-[500] text-[0.85em] text-[black] w-full hover:text-[#c74817]  '
             >
             {prodcutLink.name}
             </Link>
@@ -194,7 +195,7 @@ const Navbar = () => {
             <div className="">
             <Link
             to="/shoplist"
-            className='font-[500] text-[0.85em] text-[black] w-full ' > 
+            className='font-[500] text-[0.85em] text-[black] w-full hover:text-[#c74817]  ' > 
             SHOP PAGES
             </Link>
             </div>
@@ -210,7 +211,7 @@ const Navbar = () => {
             <Link
             key={index}
             to={shoPageLink.href}
-            className='font-[500] text-[0.85em] text-[black] w-full '
+            className='font-[500] text-[0.85em] text-[black] w-full hover:text-[#c74817] '
             >
             {shoPageLink.name}
             </Link>
@@ -222,7 +223,7 @@ const Navbar = () => {
              {/* end  of product hover div and sunsections */}
        </div>
        <div className="navlin relative ">
-        <p className="font-[500] text-[0.95em] text-[black]">BLOG</p>
+        <p className="font-[500] text-[0.95em] text-[black] cursor-pointer ">BLOG</p>
       {/* hover-div */}
       <div className="bg-[white] mt-[2.5em] border- border-[black] py-[1.2em] pl-[1.7em] 
        pr-[15em absolute w-[14em] z-[999] shadow-md left-[-1em] hidden ">
@@ -260,7 +261,7 @@ const Navbar = () => {
             <Link
             key={index}
             to={postTypeLink.href}
-            className='font-[500] text-[0.85em] text-[black] w-full '
+            className='font-[500] text-[0.85em] text-[black] w-full hover:text-[#c74817]  '
             >
             {postTypeLink.name}
             </Link>
@@ -282,7 +283,7 @@ const Navbar = () => {
             <div className="">
             <Link
             to="/shoplist"
-            className='font-[500] text-[0.85em] text-[black] w-full ' > 
+            className='font-[500] text-[0.85em] text-[black] w-full  ' > 
             LIST TYPES
             </Link>
             </div>
@@ -298,7 +299,7 @@ const Navbar = () => {
             <Link
             key={index}
             to={listTypeLink.href}
-            className='font-[500] text-[0.85em] text-[black] w-full  '
+            className='font-[500] text-[0.85em] text-[black] w-full hover:text-[#c74817]  '
             >
             {listTypeLink.name}
             </Link>
@@ -312,7 +313,7 @@ const Navbar = () => {
             <div className="">
             <Link
             to="/shoplist"
-            className='font-[500] text-[0.85em] text-[black] w-full ' > 
+            className='font-[500] text-[0.85em] text-[black] w-full hover:text-[#c74817]  ' > 
             LAYOUTS
             </Link>
             </div>
@@ -357,7 +358,7 @@ const Navbar = () => {
             <Link
             key={index}
             to={shoPageLink.href}
-            className='font-[500] text-[0.85em] text-[black] w-full '
+            className='font-[500] text-[0.85em] text-[black] w-full hover:text-[#c74817]  '
             >
             {shoPageLink.name}
             </Link>
