@@ -72,7 +72,7 @@ const Navbar = () => {
         <p className="font-[500] text-[0.95em] text-[black]">PAGES</p>
       {/* hover-div */}
         <div className="bg-[white] mt-[2.5em] border- border-[black] py-[1.2em] pl-[1.7em] 
-       pr-[15em absolute w-[14em] z-[999] shadow-md left-[-2em] ">
+       pr-[15em absolute w-[14em] z-[999] shadow-md left-[-2em] hidden ">
         {pageLinks.map((pageLink,index)=>[
           <div className="mb-2">
             <Link
@@ -88,10 +88,50 @@ const Navbar = () => {
         }
           </div> 
        </div>
-       <div className="navlin list-none">
+       <div className="navlin relative">
         <p className="font-[500] text-[0.95em] text-[black]">PRODUCTS</p>
       {/* hover-div */}
-        <div className=""></div> 
+      <div className="bg-[white] mt-[2.5em] border- border-[black] py-[1.2em] pl-[1.7em] 
+       pr-[15em absolute w-[14em] z-[999] shadow-md left-[-2em] ">
+        <div className="mb-2">
+            <Link
+            to="/shoplist"
+            className='font-[500] text-[0.85em] text-[black] w-full ' > 
+            SHOP LIST
+            </Link>
+          </div>
+          <div className="mb-2">
+            <Link
+            to="/shoplist"
+            className='font-[500] text-[0.85em] text-[black] w-full ' > 
+            SHOP SINGLE
+            </Link>
+          </div>
+          <div className="mb-2 borde border-[red] flex justify-between pr-[3em]">
+            <div className="">
+            <Link
+            to="/shoplist"
+            className='font-[500] text-[0.85em] text-[black] w-full ' > 
+            LAYOUTS
+            </Link>
+            </div>
+            <div className="">
+              <FontAwesomeIcon icon={faCaretRight} className=' hover:ml-[0.2em] ' />
+            </div>
+          </div>
+          <div className="mb-2 borde border-[red] flex justify-between pr-[3em]">
+            <div className="">
+            <Link
+            to="/shoplist"
+            className='font-[500] text-[0.85em] text-[black] w-full ' > 
+            SHOP PAGES
+            </Link>
+            </div>
+            <div className="">
+              <FontAwesomeIcon icon={faCaretRight} className=' hover:ml-[0.2em] ' />
+            </div>
+          </div>
+          </div> 
        </div>
        <div className="navlin ">
         <p className="font-[500] text-[0.95em] text-[black]">BLOG</p>
