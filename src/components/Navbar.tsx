@@ -21,6 +21,33 @@ const pageLinks=[
   {name:"CONTACT US", href:"" },
   // {name:"", href:"" },
 ]
+const prodcutLinks=[
+  {name:"THREE COLUMNS", href:"" },
+  {name:"FOUR COLUMNS", href:"" },
+  {name:"FULL WIDTH", href:"" },
+]
+const shoPageLinks=[
+  {name:"MY ACCOUNT", href:"" },
+  {name:"CART", href:"" },
+  {name:"CHECKOUT", href:"" },
+]
+const blogLinks=[
+  {name:"MASONRY", href:"" },
+  {name:"RIGHT SIDEBAR", href:"" },
+  {name:"LEFT SIDEBAR", href:"" },
+  {name:"NO SIDEBAR", href:"" },
+]
+const postTypeLinks=[
+  {name:"STANDARD", href:"" },
+  {name:"GALLERY", href:"" },
+  {name:"QUOTE", href:"" },
+  {name:"NO SIDEBAR", href:"" },
+  {name:"LINK", href:"" },
+  {name:"AUDIO", href:"" },
+  {name:"VIDEO", href:"" },
+  {name:"NO SIDEBAR", href:"" },
+]
+
 
 const Navbar = () => {
   const [navlink, setnaLinks]= useState(true)
@@ -73,6 +100,7 @@ const Navbar = () => {
       {/* hover-div */}
         <div className="bg-[white] mt-[2.5em] border- border-[black] py-[1.2em] pl-[1.7em] 
        pr-[15em absolute w-[14em] z-[999] shadow-md left-[-2em] hidden ">
+        
         {pageLinks.map((pageLink,index)=>[
           <div className="mb-2">
             <Link
@@ -92,7 +120,7 @@ const Navbar = () => {
         <p className="font-[500] text-[0.95em] text-[black]">PRODUCTS</p>
       {/* hover-div */}
       <div className="bg-[white] mt-[2.5em] border- border-[black] py-[1.2em] pl-[1.7em] 
-       pr-[15em absolute w-[14em] z-[999] shadow-md left-[-2em] ">
+       pr-[15em absolute w-[14em] z-[999] shadow-md left-[-2em] hidden ">
         <div className="mb-2">
             <Link
             to="/shoplist"
@@ -107,6 +135,7 @@ const Navbar = () => {
             SHOP SINGLE
             </Link>
           </div>
+          {/* main hover */}
           <div className="mb-2 borde border-[red] flex justify-between pr-[3em]">
             <div className="">
             <Link
@@ -119,7 +148,25 @@ const Navbar = () => {
               <FontAwesomeIcon icon={faCaretRight} className=' hover:ml-[0.2em] ' />
             </div>
           </div>
-          <div className="mb-2 borde border-[red] flex justify-between pr-[3em]">
+          {/* subsection hover to be hidden */}
+          <div className="bg-[white] mt-[2.5em] border- border-[black] py-[1.2em] pl-[1.7em] 
+        absolute w-[14em] z-[999] shadow-md left-[14em] top-[1.4em] hidden ">  
+        {prodcutLinks.map((prodcutLink,index)=>[
+          <div className="mb-2">
+            <Link
+            key={index}
+            to={prodcutLink.href}
+            className='font-[500] text-[0.85em] text-[black] w-full '
+            >
+            {prodcutLink.name}
+            </Link>
+          </div>
+        ] )
+        }
+          </div> 
+          {/* end  */}
+
+          <div className="mb-2 borde border-[red] flex justify-between pr-[3em] relative">
             <div className="">
             <Link
             to="/shoplist"
@@ -131,12 +178,75 @@ const Navbar = () => {
               <FontAwesomeIcon icon={faCaretRight} className=' hover:ml-[0.2em] ' />
             </div>
           </div>
+                 {/* subsection hover to be hidden */}
+        <div className="bg-[white] mt-[2.5em] border- border-[black] py-[1.2em] pl-[1.7em] 
+        absolute w-[14em] z-[999] shadow-md left-[14em] top-[3em] hidden ">  
+        {shoPageLinks.map((shoPageLink,index)=>[
+          <div className="mb-2">
+            <Link
+            key={index}
+            to={shoPageLink.href}
+            className='font-[500] text-[0.85em] text-[black] w-full '
+            >
+            {shoPageLink.name}
+            </Link>
+          </div>
+        ] )
+        }
+          </div> 
+          {/* end  */}
           </div> 
        </div>
-       <div className="navlin ">
+       <div className="navlin relative ">
         <p className="font-[500] text-[0.95em] text-[black]">BLOG</p>
       {/* hover-div */}
-        <div className=""></div> 
+      <div className="bg-[white] mt-[2.5em] border- border-[black] py-[1.2em] pl-[1.7em] 
+       pr-[15em absolute w-[14em] z-[999] shadow-md left-[-1em] hidden ">
+        
+        {blogLinks.map((blogLink,index)=>[
+          <div className="mb-2">
+            <Link
+            key={index}
+            to={blogLink.href}
+            className='font-[500] text-[0.85em] text-[black] w-full '
+            >
+            {blogLink.name}
+            </Link>
+          </div>
+        ] )
+        }
+            <div className="mb-2 borde border-[red] flex justify-between pr-[3em] relative">
+            <div className="">
+            <Link
+            to="/shoplist"
+            className='font-[500] text-[0.85em] text-[black] w-full ' > 
+            POST TYPES
+            </Link>
+            </div>
+            <div className=" ">
+              <FontAwesomeIcon icon={faCaretRight} className=' hover:ml-[0.2em] ' />
+            </div>
+          </div>
+          </div> 
+                           {/* subsection hover to be hidden */}
+        <div className="bg-[white] mt-[2.5em] border- border-[black] py-[1.2em] pl-[1.7em] 
+        absolute w-[14em] z-[999] shadow-md left-[13.0em] top-[9.5em] hidden ">  
+        {postTypeLinks.map((postTypeLink,index)=>[
+          <div className="mb-2">
+            <Link
+            key={index}
+            to={postTypeLink.href}
+            className='font-[500] text-[0.85em] text-[black] w-full '
+            >
+            {postTypeLink.name}
+            </Link>
+          </div>
+        ] )
+        }
+          </div> 
+          {/* end  */}
+          
+        {/* end of changes postTypeLinks */}
        </div>
        <div className="navlin">
         <p className="font-[500] text-[0.95em] text-[black]">PORTFOLIO</p>
@@ -158,8 +268,6 @@ const Navbar = () => {
             paddingRight:'3em',
             paddingTop:'1em',
             paddingBottom:'1em',
-
-            
           }}
           />
         </div>
