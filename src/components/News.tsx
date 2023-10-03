@@ -1,13 +1,18 @@
-import React from 'react'
+// import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faCaretRight } from '@fortawesome/free-solid-svg-icons'
+interface NewsPropProp{
+  date:string,
+  head:string,
+  content:string
+}
 
-const NewsProp=(props:any)=>{
+const NewsProp:React.FC<NewsPropProp> =({date,content,head})=>{
     return(
         <div className="prop mb-[2.5em] lg:pl-[1em] ">
-            <p className="date text-[#C74B4B] text-[0.9em] font-[700]  ">{props.date}</p>
-            <h2 className="text-[black] text-[1.175em] font-[700] mb-3 hover:text-[#C74B4B] ">{props.head}</h2>
-            <p className="content text-[#705B68] "> {props.content} </p>
+            <p className="date text-[#C74B4B] text-[0.9em] font-[700]  ">{date}</p>
+            <h2 className="text-[black] text-[1.175em] font-[700] mb-3 hover:text-[#C74B4B] ">{head}</h2>
+            <p className="content text-[#705B68] "> {content} </p>
         </div>
     )
 }
