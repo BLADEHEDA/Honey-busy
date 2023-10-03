@@ -14,6 +14,13 @@ const navLinks=[
   { name: "BLOG", href: "/blog" },
   { name: "PORTFOLIO", href: "/portfolio" },
 ]
+// links to the pages
+const pageLinks=[
+  {name:"ABOUT US", href:"" },
+  {name:"OUR SERVICES", href:"" },
+  {name:"CONTACT US", href:"" },
+  // {name:"", href:"" },
+]
 
 const Navbar = () => {
   const [navlink, setnaLinks]= useState(true)
@@ -39,7 +46,8 @@ const Navbar = () => {
              key={index} 
              to={navlink.href}
              className="font-[500] text-[0.95em] text-[black] "
-             >{navlink.name} </Link>
+             >{navlink.name} 
+             </Link>
           </ul>
           <p className=""> 
           <FontAwesomeIcon icon={faCaretRight} className='text-[1em] ' /></p>
@@ -60,10 +68,25 @@ const Navbar = () => {
       {/* hover-div */}
         <div className=" "></div> 
        </div>
-       <div className="navlin list-none">
+       <div className="navlin relative">
         <p className="font-[500] text-[0.95em] text-[black]">PAGES</p>
       {/* hover-div */}
-        <div className=""></div> 
+        <div className="bg-[white] mt-[2.5em] border- border-[black] py-[1.2em] pl-[1.7em] 
+       pr-[15em absolute w-[14em] z-[999] shadow-md left-[-2em] ">
+        {pageLinks.map((pageLink,index)=>[
+          <div className="mb-2">
+            <Link
+            key={index}
+            to={pageLink.href}
+            className='font-[500] text-[0.85em] text-[black] w-full '
+            >
+            {pageLink.name}
+            </Link>
+          </div>
+        ] )
+
+        }
+          </div> 
        </div>
        <div className="navlin list-none">
         <p className="font-[500] text-[0.95em] text-[black]">PRODUCTS</p>
