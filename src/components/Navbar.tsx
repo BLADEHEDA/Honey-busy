@@ -75,6 +75,16 @@ const singleTypesLinks=[
 
 const Navbar = () => {
   const [navlink, setnaLinks]= useState(true)
+  // define the hoverr staes 
+  const [page, setPage] = useState(false);
+  const [products, setProducts] = useState(false);
+  const [blog, setBlog] = useState(false);
+  const [portfolio, setPortfolio] = useState(false);
+  const [layouts, setLayouts] = useState(false);
+  const [shoppages, setShopPages] = useState(false);
+  const [postTypes, setPostTypes] = useState(false);
+  const [listTypes, setListTypes] = useState(false);
+  const [singleTypes, setSingleTypes] = useState(false);
 
   const navstyle= navlink ?"navlinks":"navlinksshow"
   const toggleNav=()=>{
@@ -82,7 +92,22 @@ const Navbar = () => {
   }
   
   return (
-    <main className="navbar"> 
+    <main
+    onMouseLeave={() => {
+      setProducts(false);
+      setBlog(false);
+      setPortfolio(false);
+      setPage(false)
+      setPostTypes(false) 
+    }}
+    onMouseEnter={()=>{ 
+      setPostTypes(false) 
+      setLayouts(false)
+      setListTypes(false)
+      setSingleTypes(false)
+    }} 
+    // onMouseLeave={()=>setBlog(false)}
+    className="navbar"> 
     <section className=" bg-[white] mobilenav px-5 py-3 lg:hidden  "> 
     <article className='flex justify-between ' >
       <div className=""> <img src={logo } className='w-[11em] ' alt="" /> </div>
@@ -115,15 +140,23 @@ const Navbar = () => {
     </article>
     <article className={`px-2  border-   border-[green] flex justify-between flex-[55%] mt-2`}>
        <div className="navlin list-none ">
-        <p className="font-[500] text-[0.95em] text-[black] ">HOME</p>
+        <p 
+          onMouseEnter={()=> setPage(false) }
+        className="font-[500] text-[0.95em] text-[black] cursor-pointer ">HOME</p>
       {/* hover-div */}
         <div className=" "></div> 
        </div>
        <div className="navlin relative">
-        <p className="font-[500] text-[0.95em] text-[black] cursor-pointer cursor-pointer ">PAGES</p>
+        <p 
+        onMouseEnter={()=>{ 
+          setPage(true)
+          setProducts(false)
+         }}
+ 
+        className="font-[500] text-[0.95em] text-[black] cursor-pointer cursor-pointer ">PAGES</p>
       {/* hover-div */}
-        <div className="bg-[white] mt-[2.5em] border- border-[black] py-[1.2em] pl-[1.7em] 
-       pr-[15em absolute w-[14em] z-[999] shadow-md left-[-2em] hidden ">
+  { page && <div className="bg-[white] mt-[2.5em] border- border-[black] py-[1.2em] pl-[1.7em] 
+       pr-[15em absolute w-[14em] z-[999] shadow-md left-[-2em]  ">
         
         {pageLinks.map((pageLink,index)=>[
           <div className="mb-2">
@@ -138,34 +171,55 @@ const Navbar = () => {
         ] )
 
         }
-          </div> 
+          </div> }
        </div>
        <div className="navlin relative">
-        <p className="font-[500] text-[0.95em] text-[black] cursor-pointer ">PRODUCTS</p>
+        <p 
+         onMouseEnter={()=> {
+          setProducts(true)
+          setPage(false)
+          setBlog(false)
+          setLayouts(false) 
+          setShopPages(false) 
+        } } 
+        //  onMouseLeave={()=>setProducts(false)}
+        className="font-[500] text-[0.95em] text-[black] cursor-pointer ">PRODUCTS</p>
       {/* hover-div */}
-      <div className="bg-[white] mt-[2.5em] border- border-[black] py-[1.2em] pl-[1.7em] 
-       pr-[15em absolute w-[14em] z-[999] shadow-md left-[-2em] hidden ">
-        <div className="mb-2">
+ { products &&   <div className="bg-[white] mt-[2.5em] border-2 border-[red] py-[1.2em]
+       pr-[15em absolute w-[14em] z-[999] shadow-md left-[-2em] hidde ">
+        <div className="mb-2  pl-[1.7em] ">
             <Link
             to="/shoplist"
             className='font-[500] text-[0.85em] text-[black] w-full hover:text-[#c74817] ' > 
             SHOP LIST
             </Link>
           </div>
-          <div className="mb-2">
+          <div 
+             onMouseEnter={()=>{ 
+              setLayouts(false) 
+              setShopPages(false) 
+             
+            }}
+          className="mb-2 ">
             <Link
             to="/shoplist"
-            className='font-[500] text-[0.85em] text-[black] w-full hover:text-[#c74817]  ' > 
+            className='font-[500] text-[0.85em] text-[black] w-full hover:text-[#c74817]  pl-[1.7em]  ' > 
             SHOP SINGLE
             </Link>
           </div>
           {/* main hover */}
-          <div className="mb-2 borde border-[red] flex justify-between pr-[3em]">
+          <div 
+            onMouseEnter={()=>{ 
+              setLayouts(true) 
+              setShopPages(false) 
+             
+            }} 
+          className="mb-2 borde border-[red] flex justify-between pr-[3em] ">
             <div className="">
             <Link
             to="/shoplist"
             className='font-[500] text-[0.85em] text-[black] w-full 
-             hover:text-[#c74817] ' > 
+             hover:text-[#c74817]  pl-[1.7em] ' > 
             LAYOUTS
             </Link>
             </div>
@@ -174,8 +228,8 @@ const Navbar = () => {
             </div>
           </div>
           {/* subsection hover to be hidden */}
-          <div className="bg-[white] mt-[2.5em] border- border-[black] py-[1.2em] pl-[1.7em] 
-        absolute w-[14em] z-[999] shadow-md left-[14em] top-[1.4em] hidden ">  
+   {  layouts && <div className="bg-[white] mt-[2.5em] border- border-[black] py-[1.2em] pl-[1.7em] 
+        absolute w-[14em] z-[999] shadow-md left-[14em] top-[1.4em]  ">  
         {prodcutLinks.map((prodcutLink,index)=>[
           <div className="mb-2">
             <Link
@@ -188,10 +242,16 @@ const Navbar = () => {
           </div>
         ] )
         }
-          </div> 
+          </div> }
           {/* end  */}
 
-          <div className="mb-2 borde border-[red] flex justify-between pr-[3em] relative">
+          <div 
+            onMouseEnter={()=> {
+              setShopPages(true) 
+              setLayouts(false)
+            }} 
+            // onMouseLeave={()=>setShopPages(false)}
+          className="mb-2 borde border-[red] flex justify-between pr-[3em] relative  pl-[1.5em] ">
             <div className="">
             <Link
             to="/shoplist"
@@ -204,8 +264,8 @@ const Navbar = () => {
             </div>
           </div>
                  {/* subsection hover to be hidden */}
-        <div className="bg-[white] mt-[2.5em] border- border-[black] py-[1.2em] pl-[1.7em] 
-        absolute w-[14em] z-[999] shadow-md left-[14em] top-[3em] hidden ">  
+  {  shoppages &&    <div className="bg-[white] mt-[2.5em] border- border-[black] py-[1.2em] pl-[1.7em] 
+        absolute w-[14em] z-[999] shadow-md left-[14em] top-[3em]  ">  
         {shoPageLinks.map((shoPageLink,index)=>[
           <div className="mb-2">
             <Link
@@ -218,33 +278,44 @@ const Navbar = () => {
           </div>
         ] )
         }
-          </div> 
-          </div> 
+          </div> }
+          </div> }
              {/* end  of product hover div and sunsections */}
        </div>
        <div className="navlin relative ">
-        <p className="font-[500] text-[0.95em] text-[black] cursor-pointer ">BLOG</p>
+        <p 
+         onMouseEnter={()=>{
+          setBlog(true)
+          setProducts(false)
+          setPortfolio(false)
+          }} 
+        className="font-[500] text-[0.95em] text-[black] cursor-pointer ">BLOG</p>
       {/* hover-div */}
-      <div className="bg-[white] mt-[2.5em] border- border-[black] py-[1.2em] pl-[1.7em] 
-       pr-[15em absolute w-[14em] z-[999] shadow-md left-[-1em] hidden ">
+  { blog &&   <div className="bg-[white] mt-[2.5em] border- border-[black] py-[1.2em] pl-[1.7em 
+       pr-[15em absolute w-[14em] z-[999] shadow-md left-[-1em] hidde ">
         
         {blogLinks.map((blogLink,index)=>[
-          <div className="mb-2">
+          <div className="mb-2 pl-[1.7em]">
             <Link
+              onMouseEnter={()=> setPostTypes(false) } 
             key={index}
             to={blogLink.href}
-            className='font-[500] text-[0.85em] text-[black] w-full '
+            className='font-[500] text-[0.85em] text-[black] w-full  hover:text-[#c74817] '
             >
             {blogLink.name}
             </Link>
           </div>
         ] )
         }
-            <div className="mb-2 borde border-[red] flex justify-between pr-[3em] relative">
+            <div 
+            onMouseEnter={()=> setPostTypes(true) } 
+            // onMouseLeave={()=>setPostTypes(false)}
+            className="mb-2  flex justify-between pr-[3em]
+             relative pl-[1.7em] hover:text-[#c74817]  ">
             <div className="">
             <Link
             to="/shoplist"
-            className='font-[500] text-[0.85em] text-[black] w-full ' > 
+            className='font-[500] text-[0.85em] text-[black] w-full hover:text-[#c74817]  ' > 
             POST TYPES
             </Link>
             </div>
@@ -252,10 +323,10 @@ const Navbar = () => {
               <FontAwesomeIcon icon={faCaretRight} className=' hover:ml-[0.2em] ' />
             </div>
           </div>
-          </div> 
-                           {/* subsection hover to be hidden */}
-        <div className="bg-[white] mt-[2.5em] border- border-[black] py-[1.2em] pl-[1.7em] 
-        absolute w-[14em] z-[999] shadow-md left-[13.0em] top-[9.5em] hidden ">  
+          </div> }
+           {/* subsection hover to be hidden */}
+  { postTypes && <div className="bg-[white] mt-[2.5em] border- border-[black] py-[1.2em] pl-[1.7em] 
+        absolute w-[14em] z-[999] shadow-md left-[13.0em] top-[9.5em]  ">  
         {postTypeLinks.map((postTypeLink,index)=>[
           <div className="mb-2">
             <Link
@@ -268,32 +339,49 @@ const Navbar = () => {
           </div>
         ] )
         }
-          </div> 
+          </div> }
           {/* end  */}
           
         {/* end of changes */}
        </div>
        {/* portfolio section and its hiiden subsections */}
        <div className="navlin relative  ">
-        <p className="font-[500] text-[0.95em] text-[black]">PORTFOLIO</p>
-        <div className="bg-[white] mt-[2.5em] border- border-[black] py-[1.2em] pl-[1.7em] 
-       pr-[15em absolute w-[14em] z-[999] shadow-md left-[-2em] hidden ">
+        <p
+         onMouseEnter={()=> {
+          setPortfolio(true)
+          setBlog(false)
+          setSingleTypes(false)
+          setLayouts(false)
+          setListTypes(false) 
+         }} 
+        className="font-[500] text-[0.95em] text-[black] cursor-pointer">PORTFOLIO</p>
+    { portfolio && <section className="bg-[white] mt-[2.5em] border- border-[black]
+     py-[1.2em] pl-[1.7em 
+      absolute w-[14em] z-[999] shadow-md left-[-2em] border-  ">
           {/* main hover */}
-          <div className="mb-2 borde border-[red] flex justify-between flex-row-reverse pr-[3em]">
+          <div 
+           onMouseEnter={()=>{ 
+            setListTypes(true)
+            setLayouts(false)
+            setSingleTypes(false)
+          } } 
+          className="mb-2 borde border-[red] flex justify-between
+          flex-row-reverse pr-[3em] border- pl-[1.7em] ">
             <div className="">
             <Link
             to="/shoplist"
-            className='font-[500] text-[0.85em] text-[black] w-full  ' > 
+            className='font-[500] text-[0.85em] text-[black] w-full hover:text-[#c74817]  ' > 
             LIST TYPES
             </Link>
             </div>
             <div className="">
-              <FontAwesomeIcon icon={faCaretLeft} className=' hover:ml-[0.2em] ' />
+              <FontAwesomeIcon icon={faCaretLeft} className=' hover:ml-[0.2em] hover:text-[#c74817] ' />
             </div>
           </div>
           {/* subsection hover to be hidden */}
-          <div className="bg-[white] mt-[2.5em] border- border-[black] py-[1.2em] pr-[1.7em] 
-        absolute w-[14em] z-[999] shadow-md right-[14.005em] bottom-[-2.0em] top-[1em hidden text-end ">  
+  {  listTypes && <div className="bg-[white] mt-[2.5em]  py-[1.2em] pr-[1.7em] 
+        absolute w-[14em] z-[999] shadow-md right-[14.005em]
+         bottom-[-2.0em] top-[1em hidde text-end  ">  
         {listTypeLinks.map((listTypeLink,index)=>[
           <div className="mb-2">
             <Link
@@ -306,10 +394,18 @@ const Navbar = () => {
           </div>
         ] )
         }
-          </div> 
+          </div> }
           {/* end  */}
           {/*nextmain hover  */}
-          <div className="mb-2 borde border-[red] flex justify-between flex-row-reverse pr-[3em]">
+          <div 
+           onMouseEnter={()=>{ 
+            setLayouts(true)
+            setListTypes(false)
+            setSingleTypes(false)
+          } } 
+        //  onMouseLeave={()=>setLayouts(false)}
+          className="mb-2 borde border-[red] flex justify-between flex-row-reverse 
+          pr-[3em] border- pl-[1.7em]">
             <div className="">
             <Link
             to="/shoplist"
@@ -318,56 +414,64 @@ const Navbar = () => {
             </Link>
             </div>
             <div className="">
-              <FontAwesomeIcon icon={faCaretLeft} className=' hover:ml-[0.2em] ' />
+              <FontAwesomeIcon icon={faCaretLeft} className=' hover:ml-[0.2em] hover:text-[#c74817] ' />
             </div>
           </div>
                  {/* subsection hover to be hidden //  */}
-        <div className="bg-[white] mt-[2.5em] border- border-[black] py-[1.2em] pr-[1.7em] 
-        absolute w-[14em] z-[999] shadow-md right-[14em] top-[-1em] hidden text-end  ">  
+ { layouts && <article
+ className="bg-[white] mt-[2.5em] border- border-[black] py-[1.2em] pr-[1.7em] 
+        absolute w-[14em] z-[999] shadow-md right-[14em] top-[-1em] hidde text-end  ">  
         {layoutLinks.map((layoutLink,index)=>[
           <div className="mb-2">
-            <Link
+            <Link         
             key={index}
             to={layoutLink.href}
-            className='font-[500] text-[0.85em] text-[black] w-full '
+            className='font-[500] text-[0.85em] text-[black] w-full hover:text-[#c74817] '
             >
             {layoutLink.name}
             </Link>
           </div>
         ] )
         }
-          </div> 
+          </article> }
           {/* MAIN HOEVR 3 */}
-          <div className="mb-2 borde border-[red] flex justify-between flex-row-reverse pr-[3em]">
+          <div 
+           onMouseEnter={()=>{ 
+            setSingleTypes(true)
+            setLayouts(false)
+            setListTypes(false)   
+           }}
+          className="mb-2 border-[red] flex justify-between flex-row-reverse 
+          pr-[3em] border- pl-[1.7em]">
             <div className="">
             <Link
             to="/shoplist"
-            className='font-[500] text-[0.85em] text-[black] w-full ' > 
+            className='font-[500] text-[0.85em] text-[black] w-full hover:text-[#c74817] ' > 
             SINGLE TYPES
             </Link>
             </div>
             <div className="">
-              <FontAwesomeIcon icon={faCaretLeft} className=' hover:ml-[0.2em] ' />
+              <FontAwesomeIcon icon={faCaretLeft} className=' hover:ml-[0.2em] hover:text-[#c74817] ' />
             </div>
           </div>
         {/* subsection hover to be hidden */}
-        <div className="bg-[white] mt-[2.5em] border- border-[black] py-[1.2em] pr-[1.7em] text-end 
-        absolute w-[14em] z-[999] shadow-md right-[14em] top-[1em] hidden ">  
+  { singleTypes &&  <div className="bg-[white] mt-[2.5em] border- border-[black] py-[1.2em] pr-[1.7em] text-end 
+        absolute w-[14em] z-[999] shadow-md right-[14em] top-[1em]  ">  
         {singleTypesLinks.map((shoPageLink,index)=>[
           <div className="mb-2">
             <Link
             key={index}
             to={shoPageLink.href}
-            className='font-[500] text-[0.85em] text-[black] w-full hover:text-[#c74817]  '
+            className='font-[500] text-[0.85em] text-[black] w-full hover:text-[#c74817] hover:text-[#c74817]  '
             >
             {shoPageLink.name}
             </Link>
           </div>
         ] )
         }
-          </div>
-          </div> 
-             {/* end  of product hover div and sunsections */}
+          </div>}
+          </section> }
+             {/* end  of portfolio hover div and sunsections */}
        </div>
        {/* portfolio end */}
       </article>
