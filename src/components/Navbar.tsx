@@ -313,20 +313,7 @@ const Navbar = () => {
           </p>
         </div>
                 {/* mobile product hover-div */}
-        {/* { page && <div className="bg-[white] 
-                 pr-[15em  w-full borer-2 ">
-          </div> }
-                setProducts(!products)
-          setPage(false)
-          setBlog(false)
-          setPortfolio(false)  
-          setShowArrow2(true)
-          setShowArrow3(!showArrow3)
-          setShowArrow1(true)
-          setShowArrow4(true)
-          setShowArrow5(true)
-          */}
-          
+  
         {/* hover blog */}
       { blog &&   <div className="bg-[white]  ">
         
@@ -376,11 +363,35 @@ const Navbar = () => {
         ] )
         }
           </div> }
-          {/* end  */}
           </div> }
-
         {/* end */}
-        <div onClick={()=>setShowArrow5(!showArrow5) } className="flex justify-between mb-1">
+              {/* { page && <div className="bg-[white] 
+                 pr-[15em  w-full borer-2 ">
+          </div> }
+                setProducts(!products)
+          setPage(false)
+          setBlog(false)
+          setPortfolio(false)  
+          setShowArrow2(true)
+          setShowArrow3(!showArrow3)
+          setShowArrow1(true)
+          setShowArrow4(true)
+          setShowArrow5(true)
+          */}
+          
+
+        <div onClick={()=>{
+          setProducts(false)
+          setPage(false)
+          setBlog(false)
+          setPortfolio(!portfolio)  
+          setShowArrow2(true)
+          setShowArrow3(!showArrow3)
+          setShowArrow1(true)
+          setShowArrow4(true)
+          setShowArrow5(!showArrow5) 
+
+          }} className="flex justify-between mb-1">
           <ul className="">
             <Link to="/portfolio" className="font-[500] text-[0.95em] text-[black] hover:text-[#c74817]">
               PORTFOLIO
@@ -391,10 +402,123 @@ const Navbar = () => {
             <FontAwesomeIcon icon={faCaretDown} className='text-[1em] ' />}
           </p>
         </div>
+        {/* protfolio */}
+        { portfolio && <section className="bg-[white]  border- border-[black]  ">
+          {/* main hover */}
+          <div 
+          onClick={()=>{
+            setShowArrow9(!showArrow9)
+            setListTypes(!listTypes)
+            setLayouts(false)
+            setSingleTypes(false)
+            setShowArrow10(true)
+            setShowArrow9(true)
+          }}
+          className="mb-2 borde border-[red] flex justify-between
+           ">
+            <div className="">
+            <Link
+            to="/shoplist"
+            className='font-[500] text-[0.85em] text-[black] w-full hover:text-[#c74817]  ' > 
+            LIST TYPES
+            </Link>
+            </div>
+            {showArrow9 ?  ( <FontAwesomeIcon icon={faCaretRight} className='text-[1em] ' />):
+            <FontAwesomeIcon icon={faCaretDown} className='text-[1em] ' />}
+          </div>
+          {/* subsection hover to be hidden */}
+  {  listTypes && <div className="bg-[white] pl-[2em]  ">  
+        {listTypeLinks.map((listTypeLink,index)=>[
+          <div className="mb-2">
+            <Link
+            key={index}
+            to={listTypeLink.href}
+            className='font-[500] text-[0.85em] text-[black] w-full hover:text-[#c74817]  '
+            >
+            {listTypeLink.name}
+            </Link>
+          </div>
+        ] )
+        }
+          </div> }
+          {/* end  */}
+          {/*nextmain hover  */}
+          <div 
+            onClick={()=>{
+              setShowArrow10(!showArrow10)
+              setListTypes(false)
+              setLayouts(!layouts)
+              setSingleTypes(false)
+              setShowArrow11(true)
+              setShowArrow9(true)
+            }}
+          className="mb-2 borde border-[red] flex justify-between ">
+            <div className="">
+            <Link
+            to="/shoplist"
+            className='font-[500] text-[0.85em] text-[black] w-full hover:text-[#c74817]  ' > 
+            LAYOUTS
+            </Link>
+            </div>
+            {showArrow10 ?  ( <FontAwesomeIcon icon={faCaretRight} className='text-[1em] ' />):
+            <FontAwesomeIcon icon={faCaretDown} className='text-[1em] ' />}
+          </div>
+                 {/* subsection hover to be hidden //  */}
+ { layouts && <article
+ className="bg-[white]  pl-[2em] ">  
+        {layoutLinks.map((layoutLink,index)=>[
+          <div className="mb-2">
+            <Link         
+            key={index}
+            to={layoutLink.href}
+            className='font-[500] text-[0.85em] text-[black] w-full hover:text-[#c74817] '
+            >
+            {layoutLink.name}
+            </Link>
+          </div>
+        ] )
+        }
+          </article> }
+          {/* MAIN HOEVR 3 */}
+          <div 
+            onClick={()=>{
+              setShowArrow11(!showArrow11)
+              setShowArrow10(true)
+              setShowArrow9(true)
+              setListTypes(false)
+              setLayouts(false)
+              setSingleTypes(!singleTypes)
+            }}
+          className="mb-2 border-[red] flex justify-between">
+            <div className="">
+            <Link
+            to="/shoplist"
+            className='font-[500] text-[0.85em] text-[black] w-full hover:text-[#c74817] ' > 
+            SINGLE TYPES
+            </Link>
+            </div>
+            {showArrow11 ?  ( <FontAwesomeIcon icon={faCaretRight} className='text-[1em] ' />):
+            <FontAwesomeIcon icon={faCaretDown} className='text-[1em] ' />}
+          </div>
+        {/* subsection hover to be hidden */}
+  { singleTypes &&  <div className="bg-[white] pl-[2em] ">  
+        {singleTypesLinks.map((shoPageLink,index)=>[
+          <div className="mb-2">
+            <Link
+            key={index}
+            to={shoPageLink.href}
+            className='font-[500] text-[0.85em] text-[black] w-full hover:text-[#c74817] hover:text-[#c74817]  '
+            >
+            {shoPageLink.name}
+            </Link>
+          </div>
+        ] )
+        }
+          </div>}
+          </section> }
+        {/* pro */}
+        
       </article>
-{/* section of the navbar to be shown when  */}
-
-
     </section>
     {/* desktop nav */}
     <section className="desktop hidden bg-[#F7F3F0] px-[6em] py-[2.2em] lg:flex justify-between  ">
