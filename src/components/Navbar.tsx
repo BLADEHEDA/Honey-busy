@@ -198,20 +198,7 @@ const Navbar = () => {
             <FontAwesomeIcon icon={faCaretDown} className='text-[1em] ' />}
           </p>
         </div>
-            {/* { products && <div className="bg-[white]   pr-[15em  w-full borer-2 ">    
-        {prodcutLinks.map((prodcutLink,index)=>[
-          <div className="mb-2">
-            <Link
-            key={index}
-            to={prodcutLink.href}
-            className='font-[500] text-[0.85em] text-[black] w-full hover:text-[#c74817]  '
-            >
-            {prodcutLink.name}
-            </Link>
-          </div>
-        ] )
-        }
-         </div> } */}
+
           { products &&   <div className="bg-[white] 
        ">
         <div className="mb-2">
@@ -221,13 +208,7 @@ const Navbar = () => {
             SHOP LIST
             </Link>
           </div>
-          <div 
-            //  onMouseEnter={()=>{ 
-            //   setLayouts(false) 
-            //   setShopPages(false) 
-             
-            // }}
-          className="mb-2 ">
+          <div className="mb-2 ">
             <Link
             to="/shoplist"
             className='font-[500] text-[0.85em] text-[black] w-full hover:text-[#c74817]  ' > 
@@ -309,7 +290,18 @@ const Navbar = () => {
           </div> }
              {/* end  of product hover div and sunsections */}
         {/* end */}
-        <div onClick={()=>setShowArrow4(!showArrow4) } className="flex justify-between mb-1">
+        <div onClick={()=>{
+          setProducts(false)
+          setPage(false)
+          setBlog(!blog)
+          setPortfolio(false)  
+          setShowArrow2(true)
+          setShowArrow3(!showArrow3)
+          setShowArrow1(true)
+          setShowArrow4(!showArrow4)
+          setShowArrow5(true)
+          
+          } } className="flex justify-between mb-1">
           <ul className="">
             <Link to="/blog" className="font-[500] text-[0.95em] text-[black] hover:text-[#c74817]">
               BLOG
@@ -334,7 +326,40 @@ const Navbar = () => {
           setShowArrow4(true)
           setShowArrow5(true)
           */}
+          
         {/* hover blog */}
+      { blog &&   <div className="bg-[white]  ">
+        
+        {blogLinks.map((blogLink,index)=>[
+          <div className="mb-2 ">
+            <Link
+              onMouseEnter={()=> setPostTypes(false) } 
+            key={index}
+            to={blogLink.href}
+            className='font-[500] text-[0.85em] text-[black] w-full  hover:text-[#c74817] '
+            >
+            {blogLink.name}
+            </Link>
+          </div>
+        ] )
+        }
+            <div 
+            onMouseEnter={()=> setPostTypes(true) } 
+            // onMouseLeave={()=>setPostTypes(false)}
+            className="mb-2  flex justify-between pr-[3em]
+             relative pl-[1.7em] hover:text-[#c74817]  ">
+            <div className="">
+            <Link
+            to="/shoplist"
+            className='font-[500] text-[0.85em] text-[black] w-full hover:text-[#c74817]  ' > 
+            POST TYPES
+            </Link>
+            </div>
+            <div className=" ">
+              <FontAwesomeIcon icon={faCaretRight} className=' hover:ml-[0.2em] ' />
+            </div>
+          </div>
+          </div> }
 
         {/* end */}
         <div onClick={()=>setShowArrow5(!showArrow5) } className="flex justify-between mb-1">
