@@ -48,14 +48,9 @@
   @media (min-width: 1px) {
     .navlinks{
       display: none;
-      background: red;
-      height: 50px;
-   
     }
     .navlinksshow{
         display: block;
-        height: 200px;
-        transition: 15s;
     }
  
   }

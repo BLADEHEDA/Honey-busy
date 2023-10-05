@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars,faCaretLeft,faCaretRight } from '@fortawesome/free-solid-svg-icons'
+import { faBars,faCaretDown,faCaretLeft,faCaretRight } from '@fortawesome/free-solid-svg-icons'
 import logo from "../assets/New-logo-png1.png"
 import { Link } from 'react-router-dom'
 import "../App.css"
@@ -7,13 +7,7 @@ import { useState } from 'react'
 import {faBasketShopping } from '@fortawesome/free-solid-svg-icons'
 import Button from './Button'
 
-const navLinks=[
-  { name: "HOME", href: "/" },
-  { name: "PAGES", href: "/pages" },
-  { name: "PRODUCTS", href: "/products" },
-  { name: "BLOG", href: "/blog" },
-  { name: "PORTFOLIO", href: "/portfolio" },
-]
+
 // links to the pages
 const pageLinks=[
   {name:"ABOUT US", href:"" },
@@ -85,12 +79,23 @@ const Navbar = () => {
   const [postTypes, setPostTypes] = useState(false);
   const [listTypes, setListTypes] = useState(false);
   const [singleTypes, setSingleTypes] = useState(false);
-
+  const [showArrow1, setShowArrow1] = useState(true)
+  const [showArrow2, setShowArrow2] = useState(true)
+  const [showArrow3, setShowArrow3] = useState(true)
+  const [showArrow4, setShowArrow4] = useState(true)
+  const [showArrow5, setShowArrow5] = useState(true)
+  const [showArrow6, setShowArrow6] = useState(true)
+  const [showArrow7, setShowArrow7] = useState(true)
+  const [showArrow8, setShowArrow8] = useState(true)
+  const [showArrow9, setShowArrow9] = useState(true)
+  const [showArrow10, setShowArrow10] = useState(true)
+  const [showArrow11, setShowArrow11] = useState(true)
+  const [showArrow12, setShowArrow12] = useState(true)
   const navstyle= navlink ?"navlinks":"navlinksshow"
   const toggleNav=()=>{
     setnaLinks(!navlink)
   }
-  
+
   return (
     <main
     onMouseLeave={() => {
@@ -107,38 +112,253 @@ const Navbar = () => {
       setSingleTypes(false)
     }} 
     // onMouseLeave={()=>setBlog(false)}
-    className="navbar"> 
-    <section className=" bg-[white] mobilenav px-5 py-3 lg:hidden  "> 
+    className="navbar "> 
+    <section className=" bg-[red h-full mobilenav px-5 py-3 lg:hidden  "> 
     <article className='flex justify-between ' >
       <div className=""> <img src={logo } className='w-[11em] ' alt="" /> </div>
       <div onClick={toggleNav} className=""> <FontAwesomeIcon icon={faBars } className=' text-[1.3em] mt-2 ' /></div>
     </article>
           {/* section for navlinks */}
-          <article className={`px-2 mt-[3em] border-  ${navstyle}`}>
-          { navLinks.map((navlink,index)=>(
-        <div className="flex justify-between mb-1">
-              <ul className="">
-            <Link
-             key={index} 
-             to={navlink.href}
-             className="font-[500] text-[0.95em] text-[black] "
-             >{navlink.name} 
-             </Link>
+          <article className={`px-2 mt-[3em] bg-white  border-  ${navstyle}`}>
+        <div onClick={()=>setShowArrow1(!showArrow1) }className="flex justify-between mb-1 border-">
+          <ul className="">
+            <Link to="/" className="font-[500] text-[0.95em] text-[black] hover:text-[#c74817] ">
+              HOME
+            </Link>
           </ul>
-          <p className=""> 
-          <FontAwesomeIcon icon={faCaretRight} className='text-[1em] ' /></p>
+          <p  className="">
+        {showArrow1 ?  ( <FontAwesomeIcon icon={faCaretRight} className='text-[1em] ' />):
+            <FontAwesomeIcon icon={faCaretDown} className='text-[1em] ' />}
+          </p>
         </div>
-          ) )
+        <div onClick={()=>{
+          setShowArrow2(!showArrow2)
+           setPage(!page) 
+           setProducts(false)
+           setBlog(false)
+           setPortfolio(false)
+           setShowArrow3(true)
+           setShowArrow1(true)
+           setShowArrow4(true)
+           setShowArrow5(true)
+          }} 
+        className="flex justify-between mb-1  ">
+          <ul className=" ">
+            <Link to="/pages" 
+            className="font-[500] text-[0.95em] text-[black] hover:text-[#c74817]">
+              PAGES
+            </Link>
+          </ul>
+          <p className="">
+        { showArrow2 ?  ( <FontAwesomeIcon icon={faCaretRight} className='text-[1em] ' />):
+            <FontAwesomeIcon icon={faCaretDown} className='text-[1em] ' />}
+          </p>
+        </div>
+                {/* hide and show show div */}
+                { page && <div className="
+                 w-full borer-2   ">
+        
+        {pageLinks.map((pageLink,index)=>[
+          <div className="mb-2">
+            <Link
+            key={index}
+            to={pageLink.href}
+            className='font-[500] text-[0.85em] text-[black] w-full hover:text-[#c74817] '
+            >
+            {pageLink.name}
+            </Link>
+          </div>
+        ] )
 
-          }
+        }
+        
+          </div> }
+        {/* end  */}
+        <div onClick={()=>{
+          setProducts(!products)
+          setPage(false)
+          setBlog(false)
+          setPortfolio(false)  
+          // setLayouts(false)
+          setShowArrow2(true)
+          setShowArrow3(!showArrow3)
+          setShowArrow1(true)
+          setShowArrow4(true)
+          setShowArrow5(true)
+          setShowArrow6(true)
+          } } 
+          className="flex justify-between mb-1">
+          <ul className="">
+            <Link to="/products" className="font-[500] text-[0.95em] text-[black] hover:text-[#c74817]">
+              PRODUCTS
+            </Link>
+          </ul>
+          <p  className="">
+        {showArrow3 ?  ( <FontAwesomeIcon icon={faCaretRight} className='text-[1em] ' />):
+            <FontAwesomeIcon icon={faCaretDown} className='text-[1em] ' />}
+          </p>
+        </div>
+            {/* { products && <div className="bg-[white]   pr-[15em  w-full borer-2 ">    
+        {prodcutLinks.map((prodcutLink,index)=>[
+          <div className="mb-2">
+            <Link
+            key={index}
+            to={prodcutLink.href}
+            className='font-[500] text-[0.85em] text-[black] w-full hover:text-[#c74817]  '
+            >
+            {prodcutLink.name}
+            </Link>
+          </div>
+        ] )
+        }
+         </div> } */}
+          { products &&   <div className="bg-[white] 
+       ">
+        <div className="mb-2">
+            <Link
+            to="/shoplist"
+            className='font-[500] text-[0.85em] text-[black] w-full hover:text-[#c74817] ' > 
+            SHOP LIST
+            </Link>
+          </div>
+          <div 
+            //  onMouseEnter={()=>{ 
+            //   setLayouts(false) 
+            //   setShopPages(false) 
+             
+            // }}
+          className="mb-2 ">
+            <Link
+            to="/shoplist"
+            className='font-[500] text-[0.85em] text-[black] w-full hover:text-[#c74817]  ' > 
+            SHOP SINGLE
+            </Link>
+          </div>
+          {/* main hover */}
+          <div 
+        onClick={()=>{
+          setShowArrow6(!showArrow6)
+          setLayouts(!layouts) 
+          setShopPages(false)
+          setShowArrow7(true)
+        }}
+          className="mb-2 border- border-[red] flex justify-between  ">
+            <div className="">
+            <Link
+            to="/shoplist"
+            className='font-[500] text-[0.85em] text-[black] w-full 
+             hover:text-[#c74817] ' > 
+            LAYOUTS
+            </Link>
+            </div>
+            {showArrow6 ?( <FontAwesomeIcon icon={faCaretRight} className='text-[1em] ' />):
+            <FontAwesomeIcon icon={faCaretDown} className='text-[1em] ' />}
+          </div>
+          {/* subsection hover to be hidden */}
+   {  layouts && <div className="bg-[white]">  
+        {prodcutLinks.map((prodcutLink,index)=>[
+          <div className="mb-2">
+            <Link
+            key={index}
+            to={prodcutLink.href}
+            className='font-[500] text-[0.85em] text-[black] w-full hover:text-[#c74817]  '
+            >
+            {prodcutLink.name}
+            </Link>
+          </div>
+        ] )
+        }
+          </div> }
+          {/* end  */}
+
+          <div 
+          onClick={()=>{
+            setShowArrow7(!showArrow7)
+            setShowArrow6(true)
+            setShopPages(!shoppages)
+            setLayouts(false)
+          } }
+          className="mb-2 border-[red] border-  flex justify-between  ">
+            <div className="">
+            <Link
+            to="/shoplist"
+            className='font-[500] text-[0.85em] text-[black] w-full hover:text-[#c74817]  ' > 
+            SHOP PAGES
+            </Link>
+            </div>
+            <p  className="">
+            {showArrow7 ?( <FontAwesomeIcon icon={faCaretRight} className='text-[1em] ' />):
+            <FontAwesomeIcon icon={faCaretDown} className='text-[1em] ' />}
+          </p>
+          </div>
+                 {/* subsection hover to be hidden */}
+  {  shoppages &&    <div className="bg-[white] pl-[2em] border- border-[black]  ">  
+        {shoPageLinks.map((shoPageLink,index)=>[
+          <div className="mb-2">
+            <Link
+            key={index}
+            to={shoPageLink.href}
+            className='font-[500] text-[0.85em] text-[black] w-full hover:text-[#c74817] '
+            >
+            {shoPageLink.name}
+            </Link>
+          </div>
+        ] )
+        }
+          </div> }
+          </div> }
+             {/* end  of product hover div and sunsections */}
+        {/* end */}
+        <div onClick={()=>setShowArrow4(!showArrow4) } className="flex justify-between mb-1">
+          <ul className="">
+            <Link to="/blog" className="font-[500] text-[0.95em] text-[black] hover:text-[#c74817]">
+              BLOG
+            </Link>
+          </ul>
+          <p  className="">
+        {showArrow4 ?  ( <FontAwesomeIcon icon={faCaretRight} className='text-[1em] ' />):
+            <FontAwesomeIcon icon={faCaretDown} className='text-[1em] ' />}
+          </p>
+        </div>
+                {/* mobile product hover-div */}
+        {/* { page && <div className="bg-[white] 
+                 pr-[15em  w-full borer-2 ">
+          </div> }
+                setProducts(!products)
+          setPage(false)
+          setBlog(false)
+          setPortfolio(false)  
+          setShowArrow2(true)
+          setShowArrow3(!showArrow3)
+          setShowArrow1(true)
+          setShowArrow4(true)
+          setShowArrow5(true)
+          */}
+        {/* hover blog */}
+
+        {/* end */}
+        <div onClick={()=>setShowArrow5(!showArrow5) } className="flex justify-between mb-1">
+          <ul className="">
+            <Link to="/portfolio" className="font-[500] text-[0.95em] text-[black] hover:text-[#c74817]">
+              PORTFOLIO
+            </Link>
+          </ul>
+          <p className="">
+        {showArrow5 ?  ( <FontAwesomeIcon icon={faCaretRight} className='text-[1em] ' />):
+            <FontAwesomeIcon icon={faCaretDown} className='text-[1em] ' />}
+          </p>
+        </div>
       </article>
+{/* section of the navbar to be shown when  */}
+
+
     </section>
     {/* desktop nav */}
     <section className="desktop hidden bg-[#F7F3F0] px-[6em] py-[2.2em] lg:flex justify-between  ">
     <article className='flex-[25%] border- border-[blue] mr-[5em] ' >
       <div className=""> <img src={logo } className='w-[14em] ' alt="" /> </div>
     </article>
-    <article className={`px-2  border-   border-[green] flex justify-between flex-[55%] mt-2`}>
+    <article className={`px-2 flex justify-between flex-[55%] mt-2`}>
        <div className="navlin list-none ">
         <p 
           onMouseEnter={()=> setPage(false) }
@@ -155,7 +375,7 @@ const Navbar = () => {
  
         className="font-[500] text-[0.95em] text-[black] cursor-pointer cursor-pointer ">PAGES</p>
       {/* hover-div */}
-  { page && <div className="bg-[white] mt-[2.5em] border- border-[black] py-[1.2em] pl-[1.7em] 
+  { page && <div className="bg-[white] mt-[2.5em] py-[1.2em] pl-[1.7em] 
        pr-[15em absolute w-[14em] z-[999] shadow-md left-[-2em]  ">
         
         {pageLinks.map((pageLink,index)=>[
@@ -185,7 +405,7 @@ const Navbar = () => {
         //  onMouseLeave={()=>setProducts(false)}
         className="font-[500] text-[0.95em] text-[black] cursor-pointer ">PRODUCTS</p>
       {/* hover-div */}
- { products &&   <div className="bg-[white] mt-[2.5em] border-2 border-[red] py-[1.2em]
+ { products &&   <div className="bg-[white] mt-[2.5em] py-[1.2em]
        pr-[15em absolute w-[14em] z-[999] shadow-md left-[-2em] hidde ">
         <div className="mb-2  pl-[1.7em] ">
             <Link
