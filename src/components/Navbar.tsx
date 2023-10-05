@@ -344,10 +344,13 @@ const Navbar = () => {
         ] )
         }
             <div 
-            onMouseEnter={()=> setPostTypes(true) } 
-            // onMouseLeave={()=>setPostTypes(false)}
-            className="mb-2  flex justify-between pr-[3em]
-             relative pl-[1.7em] hover:text-[#c74817]  ">
+              onClick={()=>{
+                setShowArrow8(!showArrow8)
+              setPostTypes(!postTypes)
+              
+              }}
+            className="mb-2  flex justify-between 
+            hover:text-[#c74817]  ">
             <div className="">
             <Link
             to="/shoplist"
@@ -355,10 +358,25 @@ const Navbar = () => {
             POST TYPES
             </Link>
             </div>
-            <div className=" ">
-              <FontAwesomeIcon icon={faCaretRight} className=' hover:ml-[0.2em] ' />
-            </div>
+            {showArrow8 ?  ( <FontAwesomeIcon icon={faCaretRight} className='text-[1em] ' />):
+            <FontAwesomeIcon icon={faCaretDown} className='text-[1em] ' />}
           </div>
+                     {/* subsection hover to be hidden */}
+  { postTypes && <div className="bg-[white] pl-[2em] border- border-[black]   ">  
+        {postTypeLinks.map((postTypeLink,index)=>[
+          <div className="mb-2">
+            <Link
+            key={index}
+            to={postTypeLink.href}
+            className='font-[500] text-[0.85em] text-[black] w-full hover:text-[#c74817]  '
+            >
+            {postTypeLink.name}
+            </Link>
+          </div>
+        ] )
+        }
+          </div> }
+          {/* end  */}
           </div> }
 
         {/* end */}
