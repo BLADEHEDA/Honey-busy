@@ -111,7 +111,7 @@ const Navbar = () => {
       setSingleTypes(false)
     }} 
     // onMouseLeave={()=>setBlog(false)}
-    className="navbar "> 
+    className="navbar bg-transparent  "> 
     <section className=" bg-[red h-full mobilenav px-5 py-3 lg:hidden  "> 
     <article className='flex justify-between ' >
       <div className=""> <img src={logo } className='w-[11em] ' alt="" /> </div>
@@ -505,7 +505,7 @@ const Navbar = () => {
       </article>
     </section>
     {/* desktop nav */}
-    <section className="desktop hidden bg-[#F7F3F0] px-[6em] py-[2.2em] lg:flex justify-between  ">
+    <section className="desktop hidden bg-transparent px-[6em] py-[2.2em] lg:flex justify-between  ">
     <article className='flex-[25%] border- border-[blue] mr-[5em] ' >
       <div className=""> <img src={logo } className='w-[14em] ' alt="" /> </div>
     </article>

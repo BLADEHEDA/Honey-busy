@@ -1,21 +1,25 @@
 // src/App.tsx
 
-import React from 'react';
-import { Provider } from 'react-redux';
-import store from './store';
+// import React from 'react';
+// import { Provider } from 'react-redux';
+// import store from './store';
 
 import './App.css';
 import { BrowserRouter,  Routes,Route} from "react-router-dom"
 import Navbar from './components/Navbar';
 import Home from './pages/HOME/Home';
 import Footer from './components/Footer';
+import AboutUs from './pages/PAGES/AboutUs';
 
 function App() {
   return (  
     <BrowserRouter  >
-    <Navbar/>
+    {/* <Navbar/> */}
+
     <Home/>
-    <Footer/>
+    {/* <AboutUs/> */}
+
+    {/* <Footer/> */}
     {/* <Routes> 
     <Route path='/' element={<SigninFacebookGoogle/>}/> 
     <Route path='diary' element={<Home/>}/> 

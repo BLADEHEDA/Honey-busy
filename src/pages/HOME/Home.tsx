@@ -9,9 +9,16 @@ import Testimonial from '../../components/Testimonial'
 import Gallery from '../../components/Gallery'
 import Newsletter from '../../components/Newsletter'
 import Honeytypes from '../../components/Honeytypes'
+import Navbar from '../../components/Navbar'
+import Footer from '../../components/Footer'
 const Home = () => {
   return (
+    <main className="">
     <div className='bg-[#F7F3F0] pb-[7em] ' >
+      <div className="bg-[white] lg:bg-transparent ">
+          <Navbar/>
+      </div>
+     
     <Mainbar/>
     <section className=" md:px-[1em] lg:px-[5em] lg:flex  ">
       <div className=" w-full">
@@ -29,6 +36,10 @@ const Home = () => {
     <Newsletter/>
     <Honeytypes/>
     </div>
+    <div className="">
+    <Footer/>
+    </div>
+    </main>
   )
 }
 
