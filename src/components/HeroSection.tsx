@@ -11,19 +11,24 @@ const HeroSection: FC<HeroSectionProps> = ({ backgroundImage, heading }) => {
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
-    minHeight: '100vh', // Set the minimum height to cover the viewport
+    // minHeight: '40vh', // Set the minimum height to cover the viewport
     display: 'flex',
+    width:'100%',
     justifyContent: 'center',
     alignItems: 'center',
     textAlign: 'center',
     color: 'white',
   };
-
   return (
-    <div style={heroStyle}>
-      <h1>{heading}</h1>
+    <div className='border-[blue] border- h-[15em] md:h-[20em] lg:h-[22em]
+    ' style={heroStyle}>
+      <h1 className='font-[900] text-[280%] mt-[1em md:text-[3.5em]
+      md:text-[3.5em] ' >{heading}</h1>
     </div>
-  );
-};
+  )
+}
 
-export default HeroSection;
+export default HeroSection
+
+
+

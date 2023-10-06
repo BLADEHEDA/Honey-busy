@@ -111,8 +111,9 @@ const Navbar = () => {
       setSingleTypes(false)
     }} 
     // onMouseLeave={()=>setBlog(false)}
-    className="navbar bg-transparent  "> 
-    <section className=" bg-[red h-full mobilenav px-5 py-3 lg:hidden  "> 
+    className="navbar bg-transparent border- border-[red]  relative "> 
+    <section className=" bg-[white] w-full h-ful mobilenav absolute
+      px-5 py-3 lg:hidden  "> 
     <article className='flex justify-between ' >
       <div className=""> <img src={logo } className='w-[11em] ' alt="" /> </div>
       <div onClick={toggleNav} className=""> <FontAwesomeIcon icon={faBars } className=' text-[1.3em] mt-2 ' /></div>

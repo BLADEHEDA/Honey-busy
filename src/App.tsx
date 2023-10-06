@@ -16,8 +16,8 @@ function App() {
     <BrowserRouter  >
     {/* <Navbar/> */}
 
-    <Home/>
-    {/* <AboutUs/> */}
+    {/* <Home/> */}
+    <AboutUs/>
 
     {/* <Footer/> */}
     {/* <Routes> 
