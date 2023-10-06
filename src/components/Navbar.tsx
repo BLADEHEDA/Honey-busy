@@ -90,7 +90,6 @@ const Navbar = () => {
   const [showArrow9, setShowArrow9] = useState(true)
   const [showArrow10, setShowArrow10] = useState(true)
   const [showArrow11, setShowArrow11] = useState(true)
-  const [showArrow12, setShowArrow12] = useState(true)
   const navstyle= navlink ?"navlinks":"navlinksshow"
   const toggleNav=()=>{
     setnaLinks(!navlink)
@@ -365,21 +364,6 @@ const Navbar = () => {
           </div> }
           </div> }
         {/* end */}
-              {/* { page && <div className="bg-[white] 
-                 pr-[15em  w-full borer-2 ">
-          </div> }
-                setProducts(!products)
-          setPage(false)
-          setBlog(false)
-          setPortfolio(false)  
-          setShowArrow2(true)
-          setShowArrow3(!showArrow3)
-          setShowArrow1(true)
-          setShowArrow4(true)
-          setShowArrow5(true)
-          */}
-          
-
         <div onClick={()=>{
           setProducts(false)
           setPage(false)
@@ -862,9 +846,9 @@ const Navbar = () => {
        </div>
        {/* portfolio end */}
       </article>
-      <article className=" flex border- border-[red] flex-[20%] ml-[3em] justify-between ">
+      <article className=" flex border- mt-[-1px] border-[red] flex-[20%] ml-[3em] justify-between ">
       <div className="">
-      <FontAwesomeIcon icon={faBasketShopping} className='mt-3 text-[1.3em] ' /> 
+      <FontAwesomeIcon icon={faBasketShopping} className='mt-2 text-[1.3em] ' /> 
        </div>
         <div className=""> 
           <Button 

@@ -2,8 +2,15 @@ import React from 'react'
 import pic1 from '../assets/home-1-testimonial-1.png'  
 import pic2 from '../assets/home-1-testimonial-2.png'
 import Carousel from 'better-react-carousel'
+interface TestimonialPropProp{
+  image:string,
+  content:string,
+  name:string,
+  type:string
 
-const TestimonialProp = (props:any) => {
+} 
+
+const TestimonialProp:React.FC<TestimonialPropProp> = ({image,content,name,type}) => {
     return (
       <main className='relative md:px-[2.5em] lg:px-[3em]' >
         <div className=" absolute left-[78%] md:left-[35%] lg:left-[25%] ">
@@ -13,14 +20,14 @@ const TestimonialProp = (props:any) => {
         <section className="lg:flex ">
           <article className="">
         <div className="border-3 mb-[1.8em] pt-[1.5em] "> 
-        <img src={props.image} className=' md:w-[16em] lg:w-[55em] '  alt="" />
+        <img src={image} className=' md:w-[16em] lg:w-[55em] '  alt="" />
         </div>
         </article>
           <article className="lg:mt-[2em] lg:ml-[4em] ">
           <p className="italic text-[1.5em] text-[#705B68] mb-[1.5em] lg:text-[1.7em] lg:w-[83%] ">
-            <span>”</span>{props.content}<span>”</span></p>
-          <h2 className="font-[800] text-[1.325em] text-black  ">{props.name} </h2>
-          <h3 className="text-[#C74817] text-[0.9em] ">{props.type} </h3>
+            <span>”</span>{content}<span>”</span></p>
+          <h2 className="font-[800] text-[1.325em] text-black  ">{name} </h2>
+          <h3 className="text-[#C74817] text-[0.9em] ">{type} </h3>
           </article>
         </section>
       </main>
