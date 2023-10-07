@@ -3,6 +3,7 @@ import HeroSection from "../../components/HeroSection"
 import Navbar from "../../components/Navbar"
 import background from "../../assets/about-us-img-1.jpg"
 import HoneyRules from "../../components/HoneyRules"
+import TeamCards from "../../components/TeamCards"
 
 const AboutUs = () => {
   return (
@@ -13,6 +14,7 @@ const AboutUs = () => {
       heading="ABOUT US"
       />
       <HoneyRules/>
+      <TeamCards/>
     </div>
   )
 }

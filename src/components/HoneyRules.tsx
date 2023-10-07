@@ -47,13 +47,13 @@ const HoneyRules = () => {
         </article>
         <article></article>
         </section>
-        <section className=" hidden md:flex lg:hidde px-[2.5em] pt-[5em] pb-[7em] ">
-                <article className="flex-[50%] ">
+        <section className=" hidden md:flex px-[2.5em] lg:px-[5.5em] pt-[5em] pb-[7em] ">
+                <article className="flex-[50%] lg:flex-[40%] ">
                 <div className="">
-                <h1 className="text-[black] font-[400] text-[1.9em] ">
+                <h1 className="text-[black] font-[400] lg:font-[600] text-[1.9em] ">
                     WHAT ARE <span className="text-[#D3A863]">HONEYBEES</span>
                  </h1>  
-                <h2 className="text-[black] font-[500] text-[1.4em] mt-2 ">
+                <h2 className="text-[black] font-[500] lg:font-[600] text-[1.4em] mt-2 ">
                     15 BEEKEEPING RULES</h2>
                  </div>
                  <div className="">
@@ -61,7 +61,7 @@ const HoneyRules = () => {
                  </div>
                 </article>
 
-                <article className="flex-[50%]  ">
+                <article className="flex-[50%] lg:flex-[60%] ">
                 <div className=" pb-[1.5em] text-[#4B3B4B] text-[1.1em] ">
                 <p className=" pb-[1.4em]  ">Honeybees are essential pollinators, vital for agriculture and our ecosystem. 
                 <span className="text-[black] font-[500] ">They collect nectar, make honey</span> They collect nectar, make honey, and  live in intricate hives with a 
@@ -95,24 +95,7 @@ const HoneyRules = () => {
                 </p>
                 </article>
         </section>
-        <section className=" hidden  lg:flex px-[2em] py-[5em]">
-        {/* <p className="py-[1em] ">
-                Honeybees are fascinating insects known for their vital role in pollination.
-                 These small, industrious creatures play a significant part in our ecosystem. 
-                 They gather nectar from flowers, which they turn into honey. Honeybees live in 
-                 intricate hives with a complex social structure. Their cooperation and 
-                 communication within the colony are remarkable. Beekeepers carefully tend to 
-                 these hives to harvest honey and beeswax. Honeybees are essential for agriculture,
-                  as they help fertilize crops, ensuring the growth of fruits, vegetables, and 
-                  flowers. Their decline due to various threats, such as pesticides and habitat loss,
-                   poses a significant concern for our environment and food supply.
-                It is crucial to protect these remarkable insects for the benefit of our planet
-                </p>
-                <p className="">
-                Beekeeping rules are essential for hive health. They dictate hive care, disease prevention,
-                 and honey harvesting, ensuring healthy colonies and quality honey.
-                </p> */}
-        </section>
+    
     </main>
   )
 }

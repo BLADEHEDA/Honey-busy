@@ -11,7 +11,6 @@ const HeroSection: FC<HeroSectionProps> = ({ backgroundImage, heading }) => {
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
-    // minHeight: '40vh', // Set the minimum height to cover the viewport
     display: 'flex',
     width:'100%',
     justifyContent: 'center',
