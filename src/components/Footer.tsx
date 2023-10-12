@@ -22,7 +22,8 @@ const Footer = () => {
     <section className="my-[1.3em]">
       <img src={footer} alt="footer-image" className=' mx-auto ' />
     </section >
-    <section className="text-center text-[0.8em] ">© 2020 Qode Interactive All Rights Reserved</section>
+    <section className="text-center text-[0.8em] ">© 2020 Qode Interactive All Rights Reserved
+    </section>
   </main>
   )
 }

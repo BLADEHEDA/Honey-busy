@@ -69,13 +69,13 @@ const TeamCards = () => {
         backgroundPosition:'center',
         backgroundSize:'cover',
         backgroundRepeat:'no-repeat',
-        height:'50vh',
+        // height:'100vh',
         width:'100%'
         
 
     }
   return (
-    <main className="px-[2em] py-[6em] md:px-[3em] lg:px-[5.5em] 
+    <main className="px-[2em] py-[6em] md:px-[3em] lg:px-[5.5em]  
     lg:pt-[7em] pb-[7em] bg-transparent" style={bgImage}>
               <div className="text-center mb-[4em]"  >
         <h1 className="font-[700] text-[2.5em] text-[black] " > OUR TEAM OF EXPERTS</h1>

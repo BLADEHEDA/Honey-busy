@@ -4,6 +4,7 @@ import Navbar from "../../components/Navbar"
 import background from "../../assets/about-us-img-1.jpg"
 import HoneyRules from "../../components/HoneyRules"
 import TeamCards from "../../components/TeamCards"
+import Footer2 from "../../components/Footer2"
 
 const AboutUs = () => {
   return (
@@ -15,6 +16,7 @@ const AboutUs = () => {
       />
       <HoneyRules/>
       <TeamCards/>
+      <Footer2/>
     </div>
   )
 }
