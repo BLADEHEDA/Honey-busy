@@ -16,7 +16,9 @@ import honey1 from "../assets/home1.png"
 import honey2 from "../assets/home2.png"
 import honey3 from "../assets/honey3.png"
 import honey4 from "../assets/honey4.png"
-
+import servicehoney1 from "../assets/h2-infobox1.png"
+import servicehoney2 from "../assets/h2-infobox2.png"
+import servicehoney3 from "../assets/h2-infobox3.png"
 const products = [
   {
     id: 1,
@@ -60,6 +62,7 @@ const products = [
   {
     id: 6,
     image: product6,
+    image1:servicehoney1,
     name: "MEADOW HONEY",
     price: 15.00,
     description: "Aromatic Rosemary Honey, ideal for roasted vegetables, pairs well with cheeses and charcuterie.",
@@ -67,6 +70,7 @@ const products = [
   {
     id: 7,
     image: product7,
+    image1:servicehoney2,
     name: "ORGANIC HONEY",
     price: 15.00,
     description: "Mild, nutty Sunflower Honey, great natural sweetener for morning tea or coffee.",
@@ -74,6 +78,7 @@ const products = [
   {
     id: 8,
     image: product8,
+    image1:servicehoney3,
     name: "HONEY JAM",
     price: 20.00,
     description: "Warm, comforting Cinnamon-Infused Honey, perfect for oatmeal and baking recipes.",

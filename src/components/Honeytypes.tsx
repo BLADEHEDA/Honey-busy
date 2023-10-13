@@ -2,16 +2,22 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faCaretRight } from '@fortawesome/free-solid-svg-icons'
 import products from  "../components/Data"
-import hanging from "../assets/hanging.jpg"
+// import hanging from "../assets/hanging.jpg"
 // define the data fpr the cards
+interface HoneyCardprops{
+  image1:string,
+  name:string,
+  head:string,
+  content:string,
+}
 
-const HoneyCards = (props) => {  
+ export const HoneyCards:React.FC<HoneyCardprops> = ({image1,name,head,content}) => {  
     return (
       <main className='bg-[#FCFAF9] py-4 px-[1.2em] my-5 md:flex ' >
-        <section className="my-3 md:mr-[3em]  "><img src={props.image} alt={props.name} /></section>
+        <section className="my-3 md:mr-[3em] lg:w-[20em]  "><img src={image1} alt={name} /></section>
         <section className=" md:mt-[1em]">
-        <h2 className="font-[800] text-[1.4em] text-[black] ">{props.head} </h2>
-        <p className="w-[90%] text-[1.1em] mb-2 ">{props.content} </p>
+        <h2 className="font-[800] text-[1.4em] text-[black] ">{head} </h2>
+        <p className="w-[90%] text-[1em] mb-2 ">{content} </p>
         {/* <h4 className=""> </h4> */}
         <h4 className="text-[#C74817] text-[0.95em] font-[600]"> <span className="  hover:mr-[0.2em] ">LEARN MORE</span> 
       <FontAwesomeIcon icon={faCaretRight} className=' hover:ml-[0.8em] ' /></h4>
@@ -33,9 +39,10 @@ const Honeytypes = () => {
         {productCards.map((productCard,index)=>(
           <HoneyCards
             key={index}
-            image={productCard.image1}
+            image1={productCard.image1}
             head={productCard.name}
             content={productCard.description}
+            NAME={productCard.name}
           />
         ) )}
          </div>

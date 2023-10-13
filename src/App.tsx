@@ -10,6 +10,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/HOME/Home';
 import Footer from './components/Footer';
 import AboutUs from './pages/PAGES/AboutUs';
+import OurServices from './pages/PAGES/OurServices';
 
 function App() {
   return (  
@@ -17,7 +18,8 @@ function App() {
     {/* <Navbar/> */}
 
     {/* <Home/> */}
-    <AboutUs/>
+    {/* <AboutUs/> */}
+    <OurServices/>
 
     {/* <Footer/> */}
     {/* <Routes> 

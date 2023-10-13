@@ -93,6 +93,11 @@
     grid-template-columns: auto auto auto ;
     gap: 30px;
   } 
+  .honeytypescards2{
+    display: grid;  
+    grid-template-columns: auto auto auto ;
+    gap: 20px;
+  }
   }
 
 

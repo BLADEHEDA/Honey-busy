@@ -12,7 +12,7 @@ const Footer2 = () => {
         backgroundSize: 'cover',
         backgroundPostion:'center',
         backgroundRepeat: 'no-repeat',
-        height:'85vh',
+        height:'80vh',
         width:'100%'
     }
 
