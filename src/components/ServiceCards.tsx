@@ -6,7 +6,7 @@ import { HoneyCards} from './Honeytypes'
 const ServiceCards = () => {
     const productCards = products.slice(0,4)   
   return (
-    <div className='px-[1.7em] py-[5em] md:px-[3.5em] lg:px-[6em] border- border-[red] bg-[#F7F3F0] '>
+    <div className='px-[1.7em] py-[3em] md:px-[3.5em] lg:px-[6em] border- border-[red] bg-[#F7F3F0] '>
          {/*map and dispaly thecards  */}
          <div className="honeytypescards border- ">
         {productCards.map((productCard,index)=>(

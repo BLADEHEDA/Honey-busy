@@ -13,7 +13,7 @@ interface HoneyCardprops{
 
  export const HoneyCards:React.FC<HoneyCardprops> = ({image1,name,head,content}) => {  
     return (
-      <main className='bg-[#FCFAF9] py-4 px-[1.2em] my-5 md:flex ' >
+      <main className='bg-[#FCFAF9] py-4 lg:my-1 px-[1.2em] my-5 md:flex ' >
         <section className="my-3 md:mr-[3em] lg:w-[20em]  "><img src={image1} alt={name} /></section>
         <section className=" md:mt-[1em]">
         <h2 className="font-[800] text-[1.4em] text-[black] ">{head} </h2>
