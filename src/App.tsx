@@ -11,6 +11,7 @@ import Home from './pages/HOME/Home';
 import Footer from './components/Footer';
 import AboutUs from './pages/PAGES/AboutUs';
 import OurServices from './pages/PAGES/OurServices';
+import ContactUs from './pages/PAGES/ContactUs';
 
 function App() {
   return (  
@@ -19,7 +20,8 @@ function App() {
 
     {/* <Home/> */}
     {/* <AboutUs/> */}
-    <OurServices/>
+    {/* <OurServices/> */}
+    <ContactUs/>
 
     {/* <Footer/> */}
     {/* <Routes> 
